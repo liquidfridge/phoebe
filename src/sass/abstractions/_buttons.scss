@@ -1,0 +1,122 @@
+@mixin button-small($equal:"") {
+  @if $equal == "" {
+    padding: ($vert-spacing-unit * 0.5) ($horz-spacing-unit * 0.75);
+  }
+  @else {
+    padding: ($vert-spacing-unit * 0.5);
+  }
+}
+
+@mixin button-medium($equal:"") {
+  @if $equal == "" {
+    padding: ($vert-spacing-unit * 1) ($horz-spacing-unit * 2);
+  }
+  @else {
+    padding: ($vert-spacing-unit * 1);
+  }
+}
+
+@mixin button-large($equal:"") {
+  @if $equal == "" {
+    padding: ($vert-spacing-unit * 1.5) ($horz-spacing-unit * 3);
+  }
+  @else {
+    padding: ($vert-spacing-unit * 1.5);
+  }
+}
+
+@mixin button-square {
+  @include border-radius(0);
+}
+
+@mixin button-round-small {
+  @include border-radius($border-radius-small);
+}
+
+@mixin button-round-medium {
+  @include border-radius($border-radius-medium);
+}
+
+@mixin button-circle {
+  @include border-radius(100%);
+  line-height: 1;
+}
+
+@mixin button-circle-small {
+  @include button-circle;
+  padding: 0.5625em;
+}
+
+@mixin button($font-size, $color, $background:"", $border:"", $hover-color:"", $hover-background:"", $hover-border:"") {
+  @if $hover-color == "" {
+    $hover-color : $color;
+  }
+  @if $hover-background == "" {
+    $hover-background : $background;
+  }
+  @if $hover-border == "" {
+    $hover-border : $border;
+  }
+
+  @include font-size($font-size);
+  color: $color;
+
+  @if $background != "" {
+    background: $background;
+  }
+
+  display: inline-block;
+  border-width: 1px;
+  border-style: solid;
+
+  @if $border != "" {
+    border-color: $border;
+  }
+
+  line-height: 1.2;
+  font-family: $sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:visited {
+    color: $color;
+    text-decoration: none;
+    outline: none;
+  }
+
+  &:active, &:focus, &:hover {
+    color: $hover-color;
+
+    @if $hover-background != "" {
+      background: $hover-background;
+    }
+
+    @if $hover-border != "" {
+      border-color: $hover-border;
+    }
+
+    text-decoration: none;
+    outline: none;
+  }
+}
+
+@mixin button-with-icon($text-font-size, $icon-font-size, $color, $background:"", $border:"", $hover-color:"", $hover-background:"", $hover-border:"") {
+  @include button($text-font-size, $color, $background, $border, $hover-color, $hover-background, $hover-border);
+
+  .icon {
+    @include font-size($icon-font-size);
+  }
+
+  .text {
+    padding-left: 0.5em;
+  }
+}
+
+@mixin button-anchor {
+  .text {
+    &:active, &:focus, &:hover {
+      text-decoration: underline;
+    }
+  }
+}

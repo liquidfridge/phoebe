@@ -1,0 +1,35 @@
+/**
+ * @file
+ * Footnotes.
+ */
+
+ul.footnotes {
+  @include font-size(13px);
+  @include rhythm(2, 0, 0, 1);
+  border-top: 1px solid $medium-grey;
+  list-style: none;
+
+  li {
+    @include font-size(13px);
+    position: relative;
+    margin: 0;
+    padding: ($vert-spacing-unit * 0.25) ($horz-spacing-unit * 0.5);
+    list-style: none;
+
+    .footnote-label {
+      position: relative;
+      top: auto;
+      left: auto;
+      margin-right: 0.5em;
+    }
+  }
+}
+
+.see-footnote:target,
+.footnotes .footnote:target {
+  background-color: $light-grey;
+}
+
+.see-footnote:target {
+  border: solid 1px $light-grey;
+}

@@ -1,0 +1,35 @@
+@import "bourbon";
+@import "compass";
+@import "breakpoint";
+@import "singularitygs";
+@import "spinners";
+
+@import "variables";
+@import "abstractions";
+
+.l-region--notes-book-updated {
+  @include rhythm(2, 0, 0, 0);
+
+  .pane-node-updated {
+    p {
+      @include font-size(11px);
+      @include rhythm(1, 0, 0, 1);
+      color: $dark-grey;
+    }
+  }
+}
+
+.l-region--notes-book-body {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @include rhythm(1, 0, 0, 0.5);
+  }
+
+  h2 {
+    border-bottom: 1px solid $medium-grey;
+  }
+}

@@ -1,0 +1,107 @@
+@import "bourbon";
+@import "compass";
+@import "breakpoint";
+@import "singularitygs";
+@import "spinners";
+
+@import "variables";
+@import "abstractions";
+@import "base";
+@import "components";
+
+body {
+  background: mix($light-blue, $dark-blue);
+  color: $white;
+}
+
+.l-container {
+  padding: 10%;
+}
+
+.l-header {
+  margin: ($vert-spacing-unit * 2) 0 ($vert-spacing-unit);
+
+  .l-logo {
+    display: block;
+    border: 6px solid $white;
+    @include font-size(48px);
+    width: 1em;
+    height: 1em;
+  }
+
+  .l-title {
+    @include rhythm(0.25, 0, 0, 0.5);
+  }
+}
+
+.l-main {
+  margin: ($vert-spacing-unit) 0 ($vert-spacing-unit * 2);
+
+  .field--name-body {
+    max-width: 40em;
+  }
+
+  a {
+    @include link-colors($white, $white, $white, $white, $white);
+  }
+
+  .button-fill {
+    display: inline-block;
+    @include link-colors(mix($light-blue, $dark-blue, 50%), $white, $white, mix($light-blue, $dark-blue, 50%), $white);
+    text-decoration: none;
+    @include border-radius($border-radius-small);
+    border: 1px solid $white;
+    padding: ($vert-spacing-unit * 0.5) ($horz-spacing-unit);
+    text-transform: uppercase;
+    background: $white;
+    font-weight: bold;
+
+    &:visited {
+      text-decoration: none;
+    }
+
+    &:active, &:focus, &:hover {
+      text-decoration: none;
+      background: transparent;
+    }
+  }
+
+  .button-outline {
+    display: inline-block;
+    @include link-colors($white, $dark-blue, $dark-blue, $white, $dark-blue);
+    text-decoration: none;
+    @include border-radius($border-radius-small);
+    border: 1px solid $white;
+    padding: ($vert-spacing-unit * 0.5) ($horz-spacing-unit);
+    text-transform: uppercase;
+    font-weight: bold;
+
+    &:visited {
+      text-decoration: none;
+    }
+
+    &:active, &:focus, &:hover {
+      text-decoration: none;
+      background: $white;
+    }
+  }
+}
+
+/*----------------------------------------------------------------------
+>= 1008
+----------------------------------------------------------------------*/
+
+@include breakpoint($large) {
+
+  .l-container {
+    padding: 7% 10% 7% 50%;
+  }
+
+  .l-header {
+    .l-logo {
+      border-width: 8px;
+      @include font-size(64px);
+    }
+  }
+
+}

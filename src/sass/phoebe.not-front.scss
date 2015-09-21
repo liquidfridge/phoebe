@@ -1,0 +1,396 @@
+@import "bourbon";
+@import "compass";
+@import "breakpoint";
+@import "singularitygs";
+@import "spinners";
+
+@import "variables";
+@import "abstractions";
+@import "base";
+@import "components";
+
+body {
+  background: $dark-blue;
+}
+
+.l-header {
+  @include clearfix;
+  padding: ($vert-spacing-unit * 1.5) 0;
+  background: $light-blue;
+  color: $white;
+
+  .l-constrained {
+    width: 86%;
+    margin: 0 auto;
+  }
+
+  .l-left {
+    @include grid-span(6, 1);
+
+    .l-branding {
+      .l-logo {
+        display: block;
+        border: 4px solid $white;
+        @include font-size(32px);
+        width: 1em;
+        height: 1em;
+        text-decoration: none;
+
+        &:visited {
+          text-decoration: none;
+        }
+
+        &:active, &:focus, &:hover {
+          border-color: $dark-blue;
+          text-decoration: none;
+        }
+      }
+    }
+
+    .l-region--navigation {
+      .menu {
+        @include font-size(16px);
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+
+          a {
+            @include link-colors($white, $white, $white, $white, $white);
+            text-decoration: none;
+
+            &:visited {
+              text-decoration: none;
+            }
+
+            &:active, &:focus, &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .l-user {
+    @include grid-span(10, 7);
+
+    .menu {
+      @include font-size(13px);
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      text-align: right;
+
+      li {
+        display: inline-block;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        a {
+          display: inline-block;
+          @include link-colors($white, $dark-blue, $dark-blue, $white, $dark-blue);
+          text-decoration: none;
+          @include border-radius($border-radius-small);
+          border: 1px solid $white;
+          padding: ($vert-spacing-unit * 0.5) ($horz-spacing-unit);
+          text-transform: uppercase;
+
+          &:visited {
+            text-decoration: none;
+          }
+
+          &:active, &:focus, &:hover {
+            text-decoration: none;
+            background: $white;
+          }
+        }
+      }
+    }
+  }
+}
+
+.l-main {
+  @include clearfix;
+  background: $dark-blue;
+
+  .l-breadcrumb {
+    background: $light-grey;
+    padding: ($vert-spacing-unit * 0.66) ($horz-spacing-unit);
+    @include border-radius($border-radius-small);
+
+    .breadcrumb {
+      @include font-size(13px);
+
+      ol, ul {
+        @include rhythm(0, 0, 0, 0);
+      }
+
+      li {
+        @include rhythm(0, 0, 0, 0);
+
+        a {
+          text-decoration: none;
+
+          &:visited {
+            text-decoration: none;
+          }
+
+          &:active, &:focus, &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  .l-content {
+    background: $white;
+    color: $black;
+
+    .l-constrained {
+      width: 86%;
+      margin: 0 auto;
+      padding: ($vert-spacing-unit * 2) 0;
+    }
+
+    .tabs--primary {
+      @include font-size(13px);
+      @include rhythm(0, 0, 0, 2);
+      border-bottom: 1px solid $medium-grey;
+
+      li {
+        margin: 0 0 -1px;
+
+        a {
+          background: none;
+          padding: ($vert-spacing-unit * 0.6) ($horz-spacing-unit * 1.5);
+          @include link-colors($light-blue, $black, $black, $light-blue, $black);
+          @include border-top-left-radius($border-radius-small);
+          @include border-top-right-radius($border-radius-small);
+
+          &:active, &:focus, &:hover {
+            background: $light-grey;
+          }
+
+          &.active {
+            @include link-colors($black, $black, $black, $black, $black);
+            border: 1px solid $medium-grey;
+            border-bottom: none;
+            background: $white;
+          }
+        }
+      }
+    }
+
+    .user-login,
+    .user-pass {
+      .form-item {
+        @include rhythm(0, 0, 0, 1);
+
+        + .messages-inline {
+          @include rhythm(-1, 0, 0, 1);
+        }
+
+        .description {
+          @include element-hidden;
+        }
+      }
+
+      input[type="email"],
+      input[type="password"],
+      input[type="tel"],
+      input[type="text"] {
+        width: 100%;
+        max-width: 20em;
+      }
+    }
+  }
+
+  .l-region--sidebar {
+    display: none;
+  }
+}
+
+.l-footer {
+  @include clearfix;
+  padding: ($vert-spacing-unit * 0.5) 0;
+  background: $dark-blue;
+  color: $pale-blue;
+
+  .l-constrained {
+    width: 86%;
+    margin: 0 auto;
+  }
+
+  a {
+    @include link-colors($lightest-blue, $lightest-blue, $lightest-blue, $lightest-blue, $lightest-blue);
+  }
+
+  .block--footer-message {
+    text-align: center;
+
+    p {
+      @include font-size(13px);
+      @include rhythm(1, 0, 0, 1);
+    }
+  }
+
+  .block--menu-menu-footer-menu {
+    .menu {
+      @include font-size(13px);
+      list-style: none;
+      margin: ($vert-spacing-unit * 0.5) 0;
+      padding: 0;
+      text-align: center;
+
+      li {
+        display: inline;
+        list-style: none;
+        margin: 0 ($horz-spacing-unit * 2) 0 0;
+        padding: 0;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
+/*----------------------------------------------------------------------
+>= 1008
+----------------------------------------------------------------------*/
+
+@include breakpoint($large) {
+
+  .l-header {
+    padding: ($vert-spacing-unit * 2) 0;
+
+    .l-constrained {
+      width: 82.5%;
+    }
+
+    .l-left {
+      @include grid-span(12, 1);
+
+      .l-branding {
+        float: left;
+
+        .l-logo {
+          border-width: 6px;
+          @include font-size(48px);
+        }
+      }
+
+      .l-region--navigation {
+        @include margin-left(48px);
+
+        .menu {
+          @include font-size(18px);
+          margin: ($vert-spacing-unit * 0.5) 0 ($vert-spacing-unit * 0.5) ($horz-spacing-unit * 4);
+
+          li {
+            display: inline;
+            margin: 0 ($horz-spacing-unit * 2) 0 0;
+          }
+        }
+      }
+    }
+
+    .l-user {
+      @include grid-span(4, 13);
+
+      .menu {
+        margin: ($vert-spacing-unit * 0.5) 0;
+      }
+    }
+  }
+
+  .l-main {
+    .l-content {
+      @include grid-span(12, 5, $gutter: 0);
+
+      .l-constrained {
+        width: 70%;
+        margin: 0 20% 0 10%;
+        padding: ($vert-spacing-unit * 5) 0;
+      }
+    }
+
+    .l-region--sidebar {
+      display: block;
+      @include grid-span(4, 1, $gutter: 0);
+      background: $dark-blue;
+      color: $white;
+
+      .l-constrained {
+        width: 55%;
+        margin: 0 10% 0 35%;
+        padding: ($vert-spacing-unit * 5) 0;
+      }
+
+      .block--dandelion-notes-menu {
+        a {
+          @include link-colors($lightest-blue, $lightest-blue, $lightest-blue, $lightest-blue, $lightest-blue);
+          text-decoration: none;
+
+          &:visited {
+            text-decoration: none;
+          }
+
+          &:active, &:focus, &:hover {
+            text-decoration: underline;
+          }
+        }
+
+        a.active {
+          @include link-colors($white, $white, $white, $white, $white);
+        }
+
+        ol, ul {
+          list-style: none;
+          margin-left: 0;
+          margin-right: 0;
+          padding-left: 0;
+          padding-right: 0;
+
+          li {
+            list-style: none;
+            @include rhythm(0, 0.25, 0.25, 0);
+            margin-left: 0;
+            margin-right: 0;
+            padding-left: 0;
+            padding-right: 0;
+
+            ol, ul {
+              @include rhythm(0.5, 0, 0, 0.5);
+              padding-left: 1.5em;
+            }
+          }
+        }
+
+        .expanded {
+          .menu {
+            border-left: 1px solid $light-blue;
+            margin-left: 0.5em;
+          }
+        }
+      }
+    }
+  }
+
+  .l-footer {
+    padding: ($vert-spacing-unit * 2.5) 0;
+
+    .l-constrained {
+      width: 82.5%;
+    }
+  }
+
+}

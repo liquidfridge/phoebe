@@ -1,0 +1,134 @@
+/**
+ * @file
+ * Comments.
+ */
+
+.comments {
+  .indented {
+    margin-left: $horz-spacing-unit * 3;
+  }
+}
+
+.comments__title,
+.comments__form-title {
+  border-bottom: 1px solid $medium-grey;
+}
+
+.comments__form-title {
+  margin-top: 1.5em;
+}
+
+.comment {
+  margin: ($vert-spacing-unit) 0;
+  padding: ($vert-spacing-unit * 1.5) ($horz-spacing-unit * 1.5);
+  @include border-radius($border-radius-medium);
+  background: $lightest-grey;
+}
+
+.comment--new {
+  background: $light-yellow;
+  padding: 1em;
+
+  .new {
+    @include border-radius($border-radius-medium);
+    @include font-size(11px);
+    display: inline-block;
+    padding: ($vert-spacing-unit * 0.3) ($horz-spacing-unit * 0.6);
+    margin: 0 0 $vert-spacing-unit;
+    background: $medium-green;
+    color: $white;
+  }
+}
+
+.comment__info {
+  @include font-size(13px);
+  @include rhythm(0, 0, 0, 1);
+  color: $dark-grey;
+
+  p {
+    @include font-size(13px);
+    @include rhythm(0, 0, 0, 0);
+  }
+
+  .username,
+  .permalink {
+    text-decoration: none;
+
+    &:visited {
+      text-decoration: none;
+    }
+
+    &:active, &:focus, &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .username {
+    @include link-colors($black, $light-blue, $light-blue, $black, $light-blue);
+    @include font-size(14px);
+    font-weight: bold;
+  }
+
+  .permalink {
+    margin-left: $horz-spacing-unit * 0.5;
+  }
+
+  .time {
+    margin-left: $horz-spacing-unit * 0.5;
+  }
+}
+
+.comment__content {
+  p,
+  ol,
+  ul {
+    @include font-size(14px);
+  }
+}
+
+.comment__submitted {
+  display: inline;
+}
+
+.talk-page > .links a,
+.comment__links a,
+.ckeditor_links {
+  @include button(13px, $dark-grey, $white, $medium-grey, $white, $light-blue, $light-blue);
+  @include button-small;
+  @include button-round-small;
+  font-weight: normal;
+}
+
+.ckeditor_links {
+  margin: ($vert-spacing-unit * 1.5) 0 0;
+}
+
+.comment__links {
+  li {
+    @include rhythm(0.5, 0, 0, 0);
+  }
+}
+
+.form-item-comment-body-und-0-value {
+  label {
+    @include element-invisible;
+  }
+}
+
+/*----------------------------------------------------------------------
+>= 752
+----------------------------------------------------------------------*/
+
+@include breakpoint($medium) {
+
+  .comments {
+    .indented {
+      margin-left: $horz-spacing-unit * 5;
+    }
+  }
+
+  .comment {
+    margin: ($vert-spacing-unit * 2.5) 0;
+  }
+
+}
