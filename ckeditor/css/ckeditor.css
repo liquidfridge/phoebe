@@ -398,16 +398,16 @@ TYPOGRAPHY
  * Links
  */
 a {
-  color: #22ACBE;
+  color: #20A3B6;
   text-decoration: underline; }
 a:visited {
-  color: #22ACBE; }
+  color: #20A3B6; }
 a:focus {
-  color: #22ACBE; }
+  color: #20A3B6; }
 a:hover {
-  color: #22ACBE; }
+  color: #20A3B6; }
 a:active {
-  color: #22ACBE; }
+  color: #20A3B6; }
 a:visited {
   text-decoration: underline; }
 a:active, a:focus, a:hover {

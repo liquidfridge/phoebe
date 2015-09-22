@@ -219,8 +219,8 @@ input[type="submit"] {
   input[type="reset"]:hover,
   input[type="submit"]:active, input[type="submit"]:focus, input[type="submit"]:hover {
     color: #FFF;
-    background: #22ACBE;
-    border-color: #22ACBE;
+    background: #20A3B6;
+    border-color: #20A3B6;
     text-decoration: none;
     outline: none; }
 
@@ -394,16 +394,16 @@ body {
  * Links
  */
 a {
-  color: #22ACBE;
+  color: #20A3B6;
   text-decoration: underline; }
   a:visited {
-    color: #22ACBE; }
+    color: #20A3B6; }
   a:focus {
-    color: #22ACBE; }
+    color: #20A3B6; }
   a:hover {
-    color: #22ACBE; }
+    color: #20A3B6; }
   a:active {
-    color: #22ACBE; }
+    color: #20A3B6; }
   a:visited {
     text-decoration: underline; }
   a:active, a:focus, a:hover {
@@ -597,11 +597,11 @@ div.krumo-root {
     .comment__info .username:visited {
       color: #222; }
     .comment__info .username:focus {
-      color: #22ACBE; }
+      color: #20A3B6; }
     .comment__info .username:hover {
-      color: #22ACBE; }
+      color: #20A3B6; }
     .comment__info .username:active {
-      color: #22ACBE; }
+      color: #20A3B6; }
   .comment__info .permalink {
     margin-left: 0.5em; }
   .comment__info .time {
@@ -650,8 +650,8 @@ div.krumo-root {
   .comment__links a:hover,
   .ckeditor_links:active, .ckeditor_links:focus, .ckeditor_links:hover {
     color: #FFF;
-    background: #22ACBE;
-    border-color: #22ACBE;
+    background: #20A3B6;
+    border-color: #20A3B6;
     text-decoration: none;
     outline: none; }
 

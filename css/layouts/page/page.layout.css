@@ -87,13 +87,13 @@ Pass any number of seconds referring to the duration of one full rotation for an
  * `:before` to contain the top-margins of child elements.
  */
 .l-region--page-updated {
-  margin-top: 3em;
+  margin-top: 2.25em;
   padding-top: 0em;
   padding-bottom: 0em;
-  margin-bottom: 0em; }
+  margin-bottom: 1.5em; }
   .l-region--page-updated .pane-node-updated p {
-    font-size: 11px;
-    font-size: 0.78571rem;
+    font-size: 12px;
+    font-size: 0.85714rem;
     margin-top: 1.5em;
     padding-top: 0em;
     padding-bottom: 0em;
@@ -113,5 +113,15 @@ Pass any number of seconds referring to the duration of one full rotation for an
 
 .l-region--page-body h2 {
   border-bottom: 1px solid #C0C0C0; }
+
+/*----------------------------------------------------------------------
+>= 1008
+----------------------------------------------------------------------*/
+@media (min-width: 63em) {
+  .l-region--page-updated {
+    margin-top: 3em;
+    padding-top: 0em;
+    padding-bottom: 0em;
+    margin-bottom: 1.5em; } }
 
 /*# sourceMappingURL=../../layouts/page/page.layout.css.map */

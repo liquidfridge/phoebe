@@ -8,11 +8,11 @@
 @import "abstractions";
 
 .l-region--page-updated {
-  @include rhythm(2, 0, 0, 0);
+  @include rhythm(1.5, 0, 0, 1);
 
   .pane-node-updated {
     p {
-      @include font-size(11px);
+      @include font-size(12px);
       @include rhythm(1, 0, 0, 1);
       color: $dark-grey;
     }
@@ -32,4 +32,16 @@
   h2 {
     border-bottom: 1px solid $medium-grey;
   }
+}
+
+/*----------------------------------------------------------------------
+>= 1008
+----------------------------------------------------------------------*/
+
+@include breakpoint($large) {
+
+  .l-region--page-updated {
+    @include rhythm(2, 0, 0, 1);
+  }
+
 }

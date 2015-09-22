@@ -156,7 +156,7 @@ body {
     .l-constrained {
       width: 86%;
       margin: 0 auto;
-      padding: ($vert-spacing-unit * 2) 0;
+      padding: ($vert-spacing-unit * 2) 0 ($vert-spacing-unit * 1);
     }
 
     .tabs--primary {
@@ -219,7 +219,7 @@ body {
 
 .l-footer {
   @include clearfix;
-  padding: ($vert-spacing-unit * 0.5) 0;
+  padding: ($vert-spacing-unit * 0.75) 0;
   background: $dark-blue;
   color: $pale-blue;
 
@@ -236,16 +236,16 @@ body {
     text-align: center;
 
     p {
-      @include font-size(13px);
+      @include font-size(12px);
       @include rhythm(1, 0, 0, 1);
     }
   }
 
   .block--menu-menu-footer-menu {
     .menu {
-      @include font-size(13px);
+      @include font-size(14px);
       list-style: none;
-      margin: ($vert-spacing-unit * 0.5) 0;
+      margin: ($vert-spacing-unit * 1) 0;
       padding: 0;
       text-align: center;
 
@@ -319,7 +319,7 @@ body {
       .l-constrained {
         width: 70%;
         margin: 0 20% 0 10%;
-        padding: ($vert-spacing-unit * 5) 0;
+        padding: ($vert-spacing-unit * 5) 0 ($vert-spacing-unit * 4);
       }
     }
 
