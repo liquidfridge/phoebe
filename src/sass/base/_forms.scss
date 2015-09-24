@@ -20,7 +20,7 @@ input[type="tel"],
 input[type="text"] {
   @include font-size(14px);
   background: $white;
-  border: 1px solid $medium-grey;
+  border: 1px solid $light-grey;
   padding: ($vert-spacing-unit * 0.5) ($horz-spacing-unit * 0.5);
 
   &.error {
@@ -40,7 +40,7 @@ select {
 textarea {
   @include font-size(14px);
   background: $white;
-  border: 1px solid $medium-grey;
+  border: 1px solid $light-grey;
   padding: ($vert-spacing-unit * 0.75) ($horz-spacing-unit * 0.75);
 
   &.error {
@@ -58,7 +58,7 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  @include button(13px, $white, $dark-blue, $dark-blue, $white, $light-blue, $light-blue);
+  @include button(13px, $white, $navy, $navy, $white, $sky, $sky);
   @include button-medium;
   @include button-round-medium;
 }
@@ -67,7 +67,7 @@ input[type="submit"] {
 .form-actions label:not(.option) {
   @include font-size(13px);
   @include rhythm(0, 0, 0, 0.25);
-  line-height: 1.5;
+  line-height: 1.6;
   font-family: $sans-serif;
   font-weight: bold;
 }
@@ -89,5 +89,5 @@ input[type="radio"] + label.option {
 .form-actions .description {
   @include font-size(13px);
   @include rhythm(0.25, 0, 0, 0.25);
-  line-height: 1.5;
+  line-height: 1.6;
 }

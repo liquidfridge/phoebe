@@ -10,7 +10,7 @@
 @import "components";
 
 body {
-  background: mix($light-blue, $dark-blue);
+  background: mix($sky, $navy);
   color: $white;
 }
 
@@ -47,7 +47,7 @@ body {
 
   .button-fill {
     display: inline-block;
-    @include link-colors(mix($light-blue, $dark-blue, 50%), $white, $white, mix($light-blue, $dark-blue, 50%), $white);
+    @include link-colors(mix($sky, $navy, 50%), $white, $white, mix($sky, $navy, 50%), $white);
     text-decoration: none;
     @include border-radius($border-radius-small);
     border: 1px solid $white;
@@ -68,7 +68,7 @@ body {
 
   .button-outline {
     display: inline-block;
-    @include link-colors($white, $dark-blue, $dark-blue, $white, $dark-blue);
+    @include link-colors($white, $navy, $navy, $white, $navy);
     text-decoration: none;
     @include border-radius($border-radius-small);
     border: 1px solid $white;

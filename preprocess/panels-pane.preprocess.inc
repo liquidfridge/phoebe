@@ -8,11 +8,4 @@ function phoebe_preprocess_panels_pane(&$variables) {
   $name = 'panels_pane__' . $variables['pane']->panel . '__' . $variables['pane']->type . '__' . $variables['pane']->subtype;
   $name = str_replace(array(':', '-'), '_', $name);
   $variables['theme_hook_suggestions'][] = $name;
-
-  // Build "last updated" message.
-  if ($variables['pane']->type == 'node_updated') {
-    $variables['content'] = t('Last updated on !datetime', array(
-      '!datetime' => $variables['content'],
-    ));
-  }
 }

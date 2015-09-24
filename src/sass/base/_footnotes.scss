@@ -6,7 +6,7 @@
 ul.footnotes {
   @include font-size(13px);
   @include rhythm(2, 0, 0, 1);
-  border-top: 1px solid $medium-grey;
+  border-top: 1px solid $light-grey;
   list-style: none;
 
   li {
@@ -27,9 +27,9 @@ ul.footnotes {
 
 .see-footnote:target,
 .footnotes .footnote:target {
-  background-color: $light-grey;
+  background-color: $lighter-grey;
 }
 
 .see-footnote:target {
-  border: solid 1px $light-grey;
+  border: solid 1px $lighter-grey;
 }

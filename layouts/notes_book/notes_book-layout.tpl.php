@@ -4,4 +4,5 @@
   <?php print render($page['notes_book_body']); ?>
   <?php print render($page['notes_book_nav']); ?>
   <?php print render($page['notes_book_updated']); ?>
+  <?php print render($page['notes_book_comments']); ?>
 </div>

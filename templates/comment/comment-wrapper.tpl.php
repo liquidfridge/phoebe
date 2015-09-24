@@ -47,7 +47,7 @@
   <?php print render($content['comments']); ?>
 
   <?php if ($content['comment_form']): ?>
-    <h2<?php print $form_title_attributes ?>><?php print t('Add new comment'); ?></h2>
+    <h2<?php print $form_title_attributes ?>><?php print t('Add a comment'); ?></h2>
     <?php print render($content['comment_form']); ?>
   <?php endif; ?>
 </section>

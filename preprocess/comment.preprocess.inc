@@ -24,8 +24,8 @@ function phoebe_preprocess_comment(&$variables) {
   );
 
   $variables['permalink'] = l(t('∞'), $uri['path'], $uri['options']);
-  $variables['submitted'] = t('!username <span class="time">!datetime</span>', array(
-    '!username' => $variables['author'],
-    '!datetime' => $variables['created'],
+  $variables['submitted'] = t('!username !datetime', array(
+    '!username' => '<span class="username">' . $comment->name . '</span>',
+    '!datetime' => '<span class="time">' . $variables['created'] . '</span>',
   ));
 }

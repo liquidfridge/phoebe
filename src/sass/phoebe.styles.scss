@@ -32,7 +32,7 @@ body.adminimal-menu div#admin-menu * {
 
 .mean-container {
   .mean-bar {
-    background: $dark-blue;
+    background: $navy;
     padding: 0;
     min-height: 42px;
   }
@@ -55,7 +55,7 @@ body.adminimal-menu div#admin-menu * {
   }
 
   .mean-nav {
-    background: $dark-blue;
+    background: $navy;
     margin-top: 44px;
 
     ul {
@@ -66,13 +66,13 @@ body.adminimal-menu div#admin-menu * {
         margin: 0;
 
         a {
-          border-top-color: lighten($dark-blue, 20%);
+          border-top-color: lighten($navy, 20%);
           padding-top: ($vert-spacing-unit * 0.85);
           padding-bottom: ($vert-spacing-unit * 0.85);
           text-transform: none;
 
           &:hover {
-            background: lighten($dark-blue, 10%);
+            background: lighten($navy, 10%);
           }
         }
       }

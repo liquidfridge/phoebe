@@ -11,46 +11,44 @@
 
 .comments__title,
 .comments__form-title {
-  border-bottom: 1px solid $medium-grey;
-}
-
-.comments__form-title {
-  margin-top: 1.5em;
+  @include font-size(16px);
+  @include rhythm(2, 0, 0.1, 1);
+  border-bottom: 1px solid $light-grey;
+  text-transform: uppercase;
 }
 
 .comment {
   margin: ($vert-spacing-unit) 0;
-  padding: ($vert-spacing-unit * 1.5) ($horz-spacing-unit * 1.5);
-  @include border-radius($border-radius-medium);
-  background: $lightest-grey;
+  padding: 0;
 }
 
 .comment--new {
   background: $light-yellow;
-  padding: 1em;
+  padding: ($vert-spacing-unit) ($horz-spacing-unit);
 
   .new {
-    @include border-radius($border-radius-medium);
+    @include border-radius($border-radius-small);
     @include font-size(11px);
     display: inline-block;
-    padding: ($vert-spacing-unit * 0.3) ($horz-spacing-unit * 0.6);
+    padding: ($vert-spacing-unit * 0.1) ($horz-spacing-unit * 0.5);
     margin: 0 0 $vert-spacing-unit;
-    background: $medium-green;
+    background: $red;
     color: $white;
   }
 }
 
 .comment__info {
-  @include font-size(13px);
+  font-family: $monospace;
+  @include font-size(12px);
   @include rhythm(0, 0, 0, 1);
-  color: $dark-grey;
+  color: $grey;
 
   p {
-    @include font-size(13px);
+    @include font-size(12px);
     @include rhythm(0, 0, 0, 0);
   }
 
-  .username,
+  a.username,
   .permalink {
     text-decoration: none;
 
@@ -64,9 +62,14 @@
   }
 
   .username {
-    @include link-colors($black, $light-blue, $light-blue, $black, $light-blue);
+    font-family: $sans-serif;
     @include font-size(14px);
+    color: $black;
     font-weight: bold;
+  }
+
+  a.username {
+    @include link-colors($black, $sky, $sky, $black, $sky);
   }
 
   .permalink {
@@ -93,7 +96,7 @@
 .talk-page > .links a,
 .comment__links a,
 .ckeditor_links {
-  @include button(13px, $dark-grey, $white, $medium-grey, $white, $light-blue, $light-blue);
+  @include button(12px, $grey, $white, $light-grey, $white, $sky, $sky);
   @include button-small;
   @include button-round-small;
   font-weight: normal;
@@ -105,7 +108,7 @@
 
 .comment__links {
   li {
-    @include rhythm(0.5, 0, 0, 0);
+    @include rhythm(0, 0, 0, 0);
   }
 }
 
@@ -123,7 +126,7 @@
 
   .comments {
     .indented {
-      margin-left: $horz-spacing-unit * 5;
+      margin-left: $horz-spacing-unit * 4;
     }
   }
 

@@ -22,7 +22,7 @@ body {
  * Links
  */
 a {
-  @include link-colors($light-blue, $light-blue, $light-blue, $light-blue, $light-blue);
+  @include link-colors($sky, $sky, $sky, $sky, $sky);
   text-decoration: underline;
 
   &:visited {
@@ -43,10 +43,10 @@ h3,
 h4,
 h5,
 h6 {
-  @include rhythm(0, 0, 0, 0.5);
-  line-height: 1.5;
-  font-family: $serif;
-  font-weight: normal;
+  @include rhythm(0, 0, 0, 0.75);
+  line-height: 1.6;
+  font-family: $sans-serif;
+  font-weight: bold;
 
   a {
     color: inherit;
@@ -64,11 +64,11 @@ h1 {
 }
 
 h2 {
-  @include font-size(25px);
+  @include font-size(24px);
 }
 
 h3 {
-  @include font-size(20px);
+  @include font-size(18px);
 }
 
 h4 {
@@ -90,7 +90,7 @@ p,
 %p {
   @include font-size(14px);
   @include rhythm(0, 0, 0, 1.25);
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 p + img {
@@ -138,6 +138,26 @@ div.krumo-root {
   ul {
     @include font-size(12px);
   }
+}
+
+/*----------------------------------------------------------------------
+>= 1008
+----------------------------------------------------------------------*/
+
+@include breakpoint($large) {
+
+  h1 {
+    @include font-size(36px);
+  }
+
+  h2 {
+    @include font-size(26px);
+  }
+
+  h3 {
+    @include font-size(20px);
+  }
+
 }
 
 /*----------------------------------------------------------------------

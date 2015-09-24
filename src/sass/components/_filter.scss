@@ -41,7 +41,7 @@
 }
 
 .tips {
-  @include font-size(13px);
+  @include font-size(12px);
   margin: ($vert-spacing-unit * 1.5) ($horz-spacing-unit * 1.5);
   padding-left: 2em;
 }

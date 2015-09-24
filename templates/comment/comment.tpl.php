@@ -59,10 +59,6 @@
  */
 ?>
 <article<?php print $attributes; ?>>
-  <?php if ($new): ?>
-    <mark class="new"><?php print $new; ?></mark>
-  <?php endif; ?>
-
   <footer class="comment__info">
     <?php print $user_picture; ?>
     <p class="submitted comment__submitted"><?php print $submitted; ?></p>

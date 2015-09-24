@@ -86,20 +86,12 @@ Pass any number of seconds referring to the duration of one full rotation for an
  * 2. The use of `table` rather than `block` is only necessary if using
  * `:before` to contain the top-margins of child elements.
  */
-.l-region--page-updated {
-  margin-top: 2.25em;
-  padding-top: 0em;
-  padding-bottom: 0em;
-  margin-bottom: 1.5em; }
-  .l-region--page-updated .pane-node-updated p {
-    font-size: 12px;
-    font-size: 0.85714rem;
-    margin-top: 1.5em;
-    padding-top: 0em;
-    padding-bottom: 0em;
-    margin-bottom: 1.5em;
-    color: #666; }
-
+.l-region--page-title h1,
+.l-region--page-title h2,
+.l-region--page-title h3,
+.l-region--page-title h4,
+.l-region--page-title h5,
+.l-region--page-title h6,
 .l-region--page-body h1,
 .l-region--page-body h2,
 .l-region--page-body h3,
@@ -108,11 +100,33 @@ Pass any number of seconds referring to the duration of one full rotation for an
 .l-region--page-body h6 {
   margin-top: 1.5em;
   padding-top: 0em;
-  padding-bottom: 0em;
-  margin-bottom: 0.75em; }
+  padding-bottom: 0.15em;
+  margin-bottom: 1.125em;
+  border-bottom: 1px solid #c8c8c8; }
 
-.l-region--page-body h2 {
-  border-bottom: 1px solid #C0C0C0; }
+.l-region--page-title h1,
+.l-region--page-title h2,
+.l-region--page-title h3,
+.l-region--page-title h4,
+.l-region--page-title h5,
+.l-region--page-title h6 {
+  margin-top: 0; }
+
+.l-region--page-updated {
+  margin-top: 2.25em;
+  padding-top: 0em;
+  padding-bottom: 0em;
+  margin-bottom: 1.5em; }
+  .l-region--page-updated .pane-node-updated {
+    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+    .l-region--page-updated .pane-node-updated p {
+      font-size: 12px;
+      font-size: 0.85714rem;
+      margin-top: 1.5em;
+      padding-top: 0em;
+      padding-bottom: 0em;
+      margin-bottom: 1.5em;
+      color: #7a7a7a; }
 
 /*----------------------------------------------------------------------
 >= 1008
