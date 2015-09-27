@@ -24,25 +24,49 @@ body {
     margin: 0 auto;
   }
 
-  .l-left {
+  .l-masthead {
     @include grid-span(6, 1);
 
     .l-branding {
-      .l-logo {
-        display: block;
-        border: 4px solid $white;
-        @include font-size(32px);
-        width: 1em;
-        height: 1em;
-        text-decoration: none;
+      .l-site-name {
+        @include font-size(20px);
+        @include rhythm(0.3, 0, 0, 0.3);
+        line-height: 1.2;
+        font-family: $monospace;
 
-        &:visited {
+        a {
+          @include link-colors($white, $white, $white, $white, $white);
           text-decoration: none;
+
+          &:visited {
+            text-decoration: none;
+          }
+
+          &:active, &:focus, &:hover {
+            text-decoration: underline;
+          }
         }
 
-        &:active, &:focus, &:hover {
-          border-color: $navy;
-          text-decoration: none;
+        .blinking-cursor {
+          padding-left: 0.15em;
+          color: $white;
+          font-weight: normal;
+          font-size: 1.2em;
+          font-family: $sans-serif;
+          @include animation(1s blink step-end infinite);
+
+          &:before {
+            content: "|";
+          }
+        }
+
+        @include keyframes(blink) {
+          from, to {
+            color: transparent;
+          }
+          50% {
+            color: $white;
+          }
         }
       }
     }
@@ -78,9 +102,10 @@ body {
 
   .l-user {
     @include grid-span(10, 7);
+    @include rhythm(0.25, 0, 0, 0.25);
 
     .menu {
-      @include font-size(13px);
+      @include font-size(12px);
       list-style: none;
       margin: 0;
       padding: 0;
@@ -228,8 +253,18 @@ body {
     margin: 0 auto;
   }
 
-  a {
+  a:not(.icon) {
     @include link-colors($light-sky, $light-sky, $light-sky, $light-sky, $light-sky);
+
+    text-decoration: none;
+
+    &:visited {
+      text-decoration: none;
+    }
+
+    &:active, &:focus, &:hover {
+      text-decoration: underline;
+    }
   }
 
   .block--footer-message {
@@ -243,7 +278,6 @@ body {
 
   .block--menu-menu-footer-menu {
     .menu {
-      @include font-size(14px);
       list-style: none;
       margin: ($vert-spacing-unit * 1) 0;
       padding: 0;
@@ -259,6 +293,14 @@ body {
           margin-right: 0;
         }
       }
+    }
+
+    a.icon {
+      @include link-colors($light-sky, $white, $white, $light-sky, $white);
+    }
+
+    [class^="icon-"], [class*=" icon-"] {
+      @include font-size(30px);
     }
   }
 }
@@ -276,15 +318,15 @@ body {
       width: 82.5%;
     }
 
-    .l-left {
+    .l-masthead {
       @include grid-span(12, 1);
 
       .l-branding {
         float: left;
 
-        .l-logo {
-          border-width: 6px;
-          @include font-size(48px);
+        .l-site-name {
+          @include font-size(28px);
+          @include rhythm(0.3, 0, 0, 0.3);
         }
       }
 
@@ -305,10 +347,7 @@ body {
 
     .l-user {
       @include grid-span(4, 13);
-
-      .menu {
-        margin: ($vert-spacing-unit * 0.5) 0;
-      }
+      @include rhythm(0.75, 0, 0, 0.75);
     }
   }
 

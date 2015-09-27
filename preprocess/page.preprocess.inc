@@ -6,6 +6,9 @@
 function phoebe_preprocess_page(&$variables) {
   global $user;
 
+  $theme_path = drupal_get_path('theme', 'phoebe');
+  $theme_url = url($theme_path);
+
   // Build menus.
   $user_menu = array();
   $path = current_path();
@@ -40,34 +43,39 @@ function phoebe_preprocess_page(&$variables) {
   // If front page.
   if ($variables['is_front']) {
     // Add CSS.
-    drupal_add_css(drupal_get_path('theme', 'phoebe') . '/css/phoebe.front.css', array(
+    drupal_add_css($theme_path . '/css/phoebe.front.css', array(
       'group' => CSS_THEME,
     ));
 
-    // Load "front" node.
-    $title = NULL;
-    $body = NULL;
-    $alias = 'front';
-    $path = drupal_lookup_path('source', $alias);
-    $front = explode('/', $path);
+    // Title.
+    $variables['page']['content']['site_name'] = variable_get('site_name');
 
-    if ($front[0] == 'node' && ctype_digit($front[1])) {
-      $nid = $front[1];
-      $node = node_load($nid);
-
-      if (!empty($node)) {
-        $node_view = node_view($node);
-        $title = $node_view['#node']->title;
-        $body = $node_view['body'];
+    // Image.
+    $url = NULL;
+    $fid = variable_get('dandelion_front_page_image');
+    if (!empty($fid)) {
+      if (($file = file_load($fid)) !== FALSE) {
+        $url = file_create_url($file->uri);
       }
     }
+    $variables['page']['content']['front_image'] = $url;
 
-    $variables['page']['content']['front_title'] = $title;
-    $variables['page']['content']['front_body'] = $body;
+    // Body.
+    $body = variable_get('dandelion_front_page_body', array('value' => NULL, 'format' => NULL));
+    $variables['page']['content']['front_body'] = check_markup($body['value'], $body['format']);
+
+    // Footer.
+    $footer = variable_get('dandelion_front_page_footer', array('value' => NULL, 'format' => NULL));
+    $variables['page']['content']['front_footer'] = check_markup($footer['value'], $footer['format']);
+
+    // Menu.
+    $tree = menu_tree_all_data('menu-front-menu');
+    $front_menu = menu_tree_output($tree);
+    $variables['page']['content']['front_menu'] = $front_menu;
   }
   else {
     // Add CSS.
-    drupal_add_css(drupal_get_path('theme', 'phoebe') . '/css/phoebe.not-front.css', array(
+    drupal_add_css($theme_path . '/css/phoebe.not-front.css', array(
       'group' => CSS_THEME,
       'weight' => -100,
     ));

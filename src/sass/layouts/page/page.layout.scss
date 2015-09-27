@@ -31,6 +31,28 @@
   }
 }
 
+.l-region--page-body {
+  figure {
+    text-align: center;
+
+    figcaption {
+      @include font-size(13px);
+      padding: ($vert-spacing-unit * 0.75) 0 0;
+      text-align: center;
+    }
+  }
+
+  picture {
+    width: 100%;
+    height: auto;
+
+    img {
+      width: 100%;
+      max-width: none;
+    }
+  }
+}
+
 .l-region--page-updated {
   @include rhythm(1.5, 0, 0, 1);
 
@@ -43,16 +65,4 @@
       color: $grey;
     }
   }
-}
-
-/*----------------------------------------------------------------------
->= 1008
-----------------------------------------------------------------------*/
-
-@include breakpoint($large) {
-
-  .l-region--page-updated {
-    @include rhythm(2, 0, 0, 1);
-  }
-
 }

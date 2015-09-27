@@ -12,7 +12,7 @@
 .comments__title,
 .comments__form-title {
   @include font-size(16px);
-  @include rhythm(2, 0, 0.1, 1);
+  @include rhythm(2.5, 0, 0.1, 1);
   border-bottom: 1px solid $light-grey;
   text-transform: uppercase;
 }
@@ -23,7 +23,7 @@
 }
 
 .comment--new {
-  background: $light-yellow;
+  background: $light-lemon;
   padding: ($vert-spacing-unit) ($horz-spacing-unit);
 
   .new {
@@ -115,6 +115,18 @@
 .form-item-comment-body-und-0-value {
   label {
     @include element-invisible;
+  }
+}
+
+.comment-confirm-delete {
+  .form-actions {
+    button,
+    .button,
+    input[type="button"],
+    input[type="reset"],
+    input[type="submit"] {
+      margin-right: 1em;
+    }
   }
 }
 

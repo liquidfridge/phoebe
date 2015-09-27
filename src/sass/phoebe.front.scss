@@ -10,97 +10,149 @@
 @import "components";
 
 body {
-  background: mix($sky, $navy);
+  background: $navy;
   color: $white;
 }
 
-.l-container {
-  padding: 10%;
-}
-
-.l-header {
-  margin: ($vert-spacing-unit * 2) 0 ($vert-spacing-unit);
-
-  .l-logo {
-    display: block;
-    border: 6px solid $white;
-    @include font-size(48px);
-    width: 1em;
-    height: 1em;
+.l-text {
+  .l-constrained {
+    width: 80%;
+    padding: 10% 0;
   }
 
-  .l-title {
-    @include rhythm(0.25, 0, 0, 0.5);
-  }
-}
+  .l-header {
+    @include rhythm(1, 0, 0, 1);
 
-.l-main {
-  margin: ($vert-spacing-unit) 0 ($vert-spacing-unit * 2);
+    .l-site-name {
+      @include rhythm(0.5, 0, 0, 0.5);
+      line-height: 1.2;
+      font-family: $monospace;
 
-  .field--name-body {
-    max-width: 40em;
-  }
+      .blinking-cursor {
+        padding-left: 0.15em;
+        color: $white;
+        font-weight: normal;
+        font-size: 1.2em;
+        font-family: $sans-serif;
+        @include animation(1s blink step-end infinite);
 
-  a {
-    @include link-colors($white, $white, $white, $white, $white);
-  }
+        &:before {
+          content: "|";
+        }
+      }
 
-  .button-fill {
-    display: inline-block;
-    @include link-colors(mix($sky, $navy, 50%), $white, $white, mix($sky, $navy, 50%), $white);
-    text-decoration: none;
-    @include border-radius($border-radius-small);
-    border: 1px solid $white;
-    padding: ($vert-spacing-unit * 0.5) ($horz-spacing-unit);
-    text-transform: uppercase;
-    background: $white;
-    font-weight: bold;
-
-    &:visited {
-      text-decoration: none;
-    }
-
-    &:active, &:focus, &:hover {
-      text-decoration: none;
-      background: transparent;
+      @include keyframes(blink) {
+        from, to {
+          color: transparent;
+        }
+        50% {
+          color: $white;
+        }
+      }
     }
   }
 
-  .button-outline {
-    display: inline-block;
-    @include link-colors($white, $navy, $navy, $white, $navy);
-    text-decoration: none;
-    @include border-radius($border-radius-small);
-    border: 1px solid $white;
-    padding: ($vert-spacing-unit * 0.5) ($horz-spacing-unit);
-    text-transform: uppercase;
-    font-weight: bold;
+  .l-main {
+    @include rhythm(1, 0, 0, 1.5);
 
-    &:visited {
-      text-decoration: none;
+    a {
+      @include link-colors($white, $white, $white, $white, $white);
     }
 
-    &:active, &:focus, &:hover {
-      text-decoration: none;
-      background: $white;
+    .l-menu {
+      @include rhythm(1, 0, 0, 1);
+
+      .menu {
+        @include horizontal-list(false);
+
+        li {
+          margin-right: $horz-spacing-unit;
+
+          a {
+            display: inline-block;
+            @include link-colors($white, $navy, $navy, $white, $navy);
+            text-decoration: none;
+            @include border-radius($border-radius-small);
+            border: 1px solid $white;
+            padding: ($vert-spacing-unit * 0.5) ($horz-spacing-unit);
+            text-transform: uppercase;
+            font-weight: bold;
+
+            &:visited {
+              text-decoration: none;
+            }
+
+            &:active, &:focus, &:hover {
+              text-decoration: none;
+              background: $white;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .l-footer {
+    color: $navy-grey;
+
+    .l-credit {
+      display: none;
+
+      p {
+        @include font-size(11px);
+      }
     }
   }
 }
 
 /*----------------------------------------------------------------------
->= 1008
+>= 752
 ----------------------------------------------------------------------*/
 
-@include breakpoint($large) {
+@include breakpoint($medium) {
 
-  .l-container {
-    padding: 7% 10% 7% 50%;
+  .l-image {
+    position: fixed;
+    width: 50%;
+    height: 100%;
   }
 
-  .l-header {
-    .l-logo {
-      border-width: 8px;
-      @include font-size(64px);
+  .no-bgsizecover {
+    .l-image {
+      background-image: none;
+    }
+  }
+
+  .bgsizecover {
+    .l-image {
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-attachment: fixed;
+
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+  }
+
+  .l-text {
+    margin-left: 50%;
+
+    .l-constrained {
+      width: 70%;
+      padding: 20% 0;
+    }
+
+    .l-main,
+    .l-footer {
+      max-width: 30em;
+    }
+
+    .l-footer {
+      .l-credit {
+        display: block;
+      }
     }
   }
 

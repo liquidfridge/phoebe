@@ -31,6 +31,28 @@
   }
 }
 
+.l-region--notes-book-body {
+  figure {
+    text-align: center;
+
+    figcaption {
+      @include font-size(13px);
+      padding: ($vert-spacing-unit * 0.75) 0 0;
+      text-align: center;
+    }
+  }
+
+  picture {
+    width: 100%;
+    height: auto;
+
+    img {
+      width: 100%;
+      max-width: none;
+    }
+  }
+}
+
 .l-region--notes-book-updated {
   @include rhythm(1.5, 0, 0, 1);
 
@@ -105,10 +127,6 @@
 
   .l-region--notes-book-nav {
     @include element-hidden;
-  }
-
-  .l-region--notes-book-updated {
-    @include rhythm(2, 0, 0, 1);
   }
 
 }

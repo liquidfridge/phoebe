@@ -112,6 +112,21 @@ Pass any number of seconds referring to the duration of one full rotation for an
 .l-region--page-title h6 {
   margin-top: 0; }
 
+.l-region--page-body figure {
+  text-align: center; }
+  .l-region--page-body figure figcaption {
+    font-size: 13px;
+    font-size: 0.92857rem;
+    padding: 0.75em 0 0;
+    text-align: center; }
+
+.l-region--page-body picture {
+  width: 100%;
+  height: auto; }
+  .l-region--page-body picture img {
+    width: 100%;
+    max-width: none; }
+
 .l-region--page-updated {
   margin-top: 2.25em;
   padding-top: 0em;
@@ -127,15 +142,3 @@ Pass any number of seconds referring to the duration of one full rotation for an
       padding-bottom: 0em;
       margin-bottom: 1.5em;
       color: #7a7a7a; }
-
-/*----------------------------------------------------------------------
->= 1008
-----------------------------------------------------------------------*/
-@media (min-width: 63em) {
-  .l-region--page-updated {
-    margin-top: 3em;
-    padding-top: 0em;
-    padding-bottom: 0em;
-    margin-bottom: 1.5em; } }
-
-/*# sourceMappingURL=../../layouts/page/page.layout.css.map */

@@ -112,6 +112,21 @@ Pass any number of seconds referring to the duration of one full rotation for an
 .l-region--notes-book-title h6 {
   margin-top: 0; }
 
+.l-region--notes-book-body figure {
+  text-align: center; }
+  .l-region--notes-book-body figure figcaption {
+    font-size: 13px;
+    font-size: 0.92857rem;
+    padding: 0.75em 0 0;
+    text-align: center; }
+
+.l-region--notes-book-body picture {
+  width: 100%;
+  height: auto; }
+  .l-region--notes-book-body picture img {
+    width: 100%;
+    max-width: none; }
+
 .l-region--notes-book-updated {
   margin-top: 2.25em;
   padding-top: 0em;
@@ -185,11 +200,4 @@ Pass any number of seconds referring to the duration of one full rotation for an
   .l-region--notes-book-toc {
     display: none; }
   .l-region--notes-book-nav {
-    display: none; }
-  .l-region--notes-book-updated {
-    margin-top: 3em;
-    padding-top: 0em;
-    padding-bottom: 0em;
-    margin-bottom: 1.5em; } }
-
-/*# sourceMappingURL=../../layouts/notes_book/notes_book.layout.css.map */
+    display: none; } }

@@ -11,8 +11,8 @@ if (typeof (CKEDITOR) !== 'undefined') {
 	CKEDITOR.addStylesSet('drupal',
 		[
 			/* Block Styles */
-			{name: 'Button: Fill', element: 'a', attributes: {'class': 'button-fill'}},
-      {name: 'Button: Outline', element: 'a', attributes: {'class': 'button-outline'}}
+      {name: 'Highlight', element: 'p', attributes: {'class': 'highlight'}},
+      {name: 'Highlight', element: 'span', attributes: {'class': 'highlight'}}
 			/* Inline Styles */
 		]);
 }

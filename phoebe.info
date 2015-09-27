@@ -15,7 +15,7 @@ stylesheets[all][] = css/phoebe.no-query.css
 ; ========================================
 ; Scripts
 ; ========================================
-; scripts[] = js/phoebe.behaviors.js
+scripts[] = js/vendor/modernizr/modernizr.js
 
 ; ========================================
 ; Regions

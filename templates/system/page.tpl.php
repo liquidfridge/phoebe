@@ -1,12 +1,15 @@
 <div class="l-page">
   <header class="l-header" role="banner">
     <div class="l-constrained">
-      <div class="l-left">
+      <div class="l-masthead">
         <div class="l-branding">
-          <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="l-logo"></a>
+          <h1 class="l-site-name">
+            <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
+          </h1>
         </div>
         <?php print render($page['navigation']); ?>
       </div>
+
       <?php if (!empty($user_menu)): ?>
         <div class="l-user">
           <?php
