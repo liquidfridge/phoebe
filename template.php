@@ -55,6 +55,36 @@ function phoebe_block_view_alter(&$data, $block) {
 }
 
 /**
+ * Implements hook_js_alter().
+ */
+function phoebe_js_alter(&$js) {
+  global $theme;
+
+  $theme_path = path_to_theme();
+
+  // Get max weight.
+  $max_weight = 0;
+  foreach ($js as $key => $value) {
+    if (!empty($value['weight']) && $value['weight'] > $max_weight) {
+      $max_weight = $value['weight'];
+    }
+  }
+
+  // Move the main script to the footer. This script includes the config, which
+  // should load after Drupal.settings has been set in the header.
+  $search = array(
+    $theme_path . '/js/' . $theme . '.js',
+    $theme_path . '/js/' . $theme . '.min.js'
+  );
+  foreach ($js as $key => $value) {
+    if (in_array($key, $search)) {
+      $js[$key]['scope'] = 'footer';
+      $js[$key]['weight'] = ++$max_weight;
+    }
+  }
+}
+
+/**
  *
  * @param array $opts
  * @return string
