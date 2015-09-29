@@ -23,12 +23,19 @@ function phoebe_preprocess_page(&$variables) {
   $path = current_path();
 
   if (user_is_logged_in()) {
-//    $user_menu[] = array(
-//      'title' => t('Log out'),
-//      'href' => url('user/logout'),
-//      'weight' => 0,
-//      'expanded' => 0,
-//    );
+    $query = array();
+
+    if (stripos($path, 'user/logout') === FALSE) {
+      $query['destination'] = $path;
+    }
+
+    $user_menu[] = array(
+      'title' => t('Log out'),
+      'href' => url('user/logout'),
+      'query' => $query,
+      'weight' => 0,
+      'expanded' => 0,
+    );
   }
   else {
     $query = array();
@@ -41,7 +48,6 @@ function phoebe_preprocess_page(&$variables) {
       'title' => t('Log in'),
       'href' => url('user/login'),
       'query' => $query,
-      'alias' => TRUE,
       'weight' => 0,
       'expanded' => 0,
     );
