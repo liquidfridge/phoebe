@@ -192,19 +192,19 @@ gulp.task('dev', function (cb) {
 });
 
 gulp.task('dev:ckeditor', ['sass:ckeditor'], function (cb) {
-  runSequence('sync:css', 'sync:php', cb);
+  runSequence('sync:css', cb);
 });
 
 gulp.task('dev:css', ['sass:dev', 'sass:ckeditor'], function (cb) {
-  runSequence('sync:css', 'sync:php', cb);
+  runSequence('sync:css', cb);
 });
 
 gulp.task('dev:js', ['js-globals:dev', 'js-phoebe:dev'], function (cb) {
-  runSequence('sync:css', 'sync:php', cb);
+  runSequence('sync:css', cb);
 });
 
 gulp.task('dev:svg', ['svg'], function (cb) {
-  runSequence('sync:css', 'sync:php', cb);
+  runSequence('sync:css', cb);
 });
 
 gulp.task('prod', function (cb) {
