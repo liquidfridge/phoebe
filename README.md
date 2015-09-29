@@ -27,6 +27,7 @@ Install:
 ```
 npm install
 bower install
+gulp modernizr
 ```
 
 Watch for file changes:

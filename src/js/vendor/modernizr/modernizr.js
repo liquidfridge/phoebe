@@ -1,6 +1,6 @@
 /*!
  * modernizr v3.0.0
- * Build http://modernizr.com/download?-bgsizecover-svg-time-addtest-fnbind-testprop-dontmin
+ * Build http://modernizr.com/download?-bgsizecover-time-addtest-fnbind-testprop-dontmin
  *
  * Copyright (c)
  *  Faruk Ates
@@ -1033,31 +1033,6 @@
 
   // Must test value, as this specifically tests the `cover` value
   Modernizr.addTest('bgsizecover', testAllProps('backgroundSize', 'cover'));
-
-/*!
-{
-  "name": "SVG",
-  "property": "svg",
-  "caniuse": "svg",
-  "tags": ["svg"],
-  "authors": ["Erik Dahlstrom"],
-  "polyfills": [
-    "svgweb",
-    "raphael",
-    "amplesdk",
-    "canvg",
-    "svg-boilerplate",
-    "sie",
-    "dojogfx",
-    "fabricjs"
-  ]
-}
-!*/
-/* DOC
-Detects support for SVG in `<embed>` or `<object>` elements.
-*/
-
-  Modernizr.addTest('svg', !!document.createElementNS && !!document.createElementNS('http://www.w3.org/2000/svg', 'svg').createSVGRect);
 
 /*!
 {

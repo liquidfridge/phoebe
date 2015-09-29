@@ -137,6 +137,28 @@ gulp.task('js-phoebe:prod', function (cb) {
       .on('end', cb);
 });
 
+gulp.task('js-vendor:dev', function (cb) {
+  gulp.src('src/js/vendor/**/*.js')
+      .pipe(sourcemaps.init())
+      .pipe(rename({
+        extname: '.min.js'
+      }))
+      .pipe(uglify())
+      .pipe(sourcemaps.write('.'))
+      .pipe(gulp.dest('js/vendor'))
+      .on('end', cb);
+});
+
+gulp.task('js-vendor:prod', function (cb) {
+  gulp.src('src/js/vendor/**/*.js')
+      .pipe(rename({
+        extname: '.min.js'
+      }))
+      .pipe(uglify())
+      .pipe(gulp.dest('js/vendor'))
+      .on('end', cb);
+});
+
 gulp.task('svg', function (cb) {
   gulp.src('src/svg/**/*.svg')
       .pipe(svgmin({
@@ -188,7 +210,7 @@ gulp.task('sync:php', function (cb) {
 });
 
 gulp.task('dev', function (cb) {
-  runSequence('clean:init', 'sass:dev', 'sass:ckeditor', 'js-globals:dev', 'js-phoebe:dev', 'svg', 'sync', 'clean:exit', cb);
+  runSequence('clean:init', 'sass:dev', 'sass:ckeditor', 'js-globals:dev', 'js-phoebe:dev', 'js-vendor:dev', 'svg', 'sync', 'clean:exit', cb);
 });
 
 gulp.task('dev:ckeditor', ['sass:ckeditor'], function (cb) {
@@ -208,7 +230,7 @@ gulp.task('dev:svg', ['svg'], function (cb) {
 });
 
 gulp.task('prod', function (cb) {
-  runSequence('clean:init', 'sass:prod', 'sass:ckeditor', 'js-globals:prod', 'js-phoebe:prod', 'svg', 'clean:exit', cb);
+  runSequence('clean:init', 'sass:prod', 'sass:ckeditor', 'js-globals:prod', 'js-phoebe:prod', 'js-vendor:prod', 'svg', 'clean:exit', cb);
 });
 
 gulp.task('watch', function () {

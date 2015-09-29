@@ -16,7 +16,7 @@ stylesheets[all][] = libraries/rh-icon/dist/css/rh-icon.css
 ; ========================================
 ; Scripts
 ; ========================================
-scripts[] = js/vendor/modernizr/modernizr.js
+scripts[] = js/vendor/modernizr/modernizr.min.js
 scripts[] = libraries/lodash/lodash.min.js
 scripts[] = js/globals.min.js
 scripts[] = libraries/html5shiv/html5shiv-printshiv.min.js
