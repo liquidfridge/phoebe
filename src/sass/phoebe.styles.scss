@@ -83,3 +83,22 @@ body.adminimal-menu div#admin-menu * {
 .l-page {
   clear: left; /* Clear MeanMenu float */
 }
+
+/*----------------------------------------------------------------------
+ERROR PAGES
+----------------------------------------------------------------------*/
+
+.maintenance-page,
+.error-page {
+  padding: 10%;
+  background: $white;
+
+  .l-main {
+    background: $white;
+
+    .l-content {
+      width: 100%;
+      float: none;
+    }
+  }
+}

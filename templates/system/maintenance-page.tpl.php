@@ -10,6 +10,7 @@
 <html lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>">
 <?php endif; ?>
 <head>
+  <?php print $head; ?>
   <title><?php print $head_title; ?></title>
   <link rel="apple-touch-icon-precomposed" sizes="192x192" href="/apple-touch-icon-192x192-precomposed.png" />
   <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/apple-touch-icon-180x180-precomposed.png" />
@@ -23,45 +24,24 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="icon" href="/favicon.ico" type="image/x-icon" />
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-  <?php print $head; ?>
+  <script>
+    (function (document) {
+      var elm = document.documentElement;
+      elm.className = elm.className.replace(/(^|\s)no\-js(\s|$)/, '$1js$2');
+    })(window.document);
+  </script>
   <?php print $styles; ?>
   <?php print $scripts; ?>
 </head>
 <body<?php print $attributes; ?>>
   <div class="l-page">
-    <header class="l-header" role="banner">
-      <div class="l-branding">
-        <?php if ($logo): ?>
-          <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="site-logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /></a>
-        <?php endif; ?>
-
-        <?php if ($site_name || $site_slogan): ?>
-          <?php if ($site_name): ?>
-            <h1 class="site-name">
-              <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
-            </h1>
-          <?php endif; ?>
-
-          <?php if ($site_slogan): ?>
-            <h2 class="site-slogan"><?php print $site_slogan; ?></h2>
-          <?php endif; ?>
-        <?php endif; ?>
-      </div>
-
-      <?php print $header; ?>
-    </header>
-
-    <div class="l-main">
+    <div class="l-main" id="main-content">
       <div class="l-content" role="main">
         <?php if ($title): ?><h1><?php print $title; ?></h1><?php endif; ?>
         <?php print $messages; ?>
-        <?php print $content; ?>
+        <?php print check_markup($content); ?>
       </div>
     </div>
-
-    <footer class="l-footer" role="contentinfo">
-      <?php print $footer; ?>
-    </footer>
   </div>
 </body>
 </html>
