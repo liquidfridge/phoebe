@@ -897,9 +897,9 @@ body {
           text-decoration: none;
           outline: none; }
         .l-text .l-header .l-user .menu li a:active, .l-text .l-header .l-user .menu li a:focus, .l-text .l-header .l-user .menu li a:hover {
-          color: #0A2D50;
-          background: #FFF;
-          border-color: #FFF;
+          color: #FFF;
+          background: #1b8c9c;
+          border-color: #1b8c9c;
           text-decoration: none;
           outline: none; }
 
@@ -990,12 +990,12 @@ body {
         .l-text .l-main .l-menu .menu li a {
           font-size: 13px;
           font-size: 0.92857rem;
-          color: #FFF;
-          background: #1b8c9c;
+          color: #0A2D50;
+          background: #FFF;
           display: inline-block;
           border-width: 1px;
           border-style: solid;
-          border-color: #1b8c9c;
+          border-color: #FFF;
           line-height: 1.2;
           font-family: Helvetica, Arial, sans-serif;
           font-weight: bold;
@@ -1006,13 +1006,13 @@ body {
           border-radius: 0.3em;
           font-weight: bold; }
           .l-text .l-main .l-menu .menu li a:visited {
-            color: #FFF;
+            color: #0A2D50;
             text-decoration: none;
             outline: none; }
           .l-text .l-main .l-menu .menu li a:active, .l-text .l-main .l-menu .menu li a:focus, .l-text .l-main .l-menu .menu li a:hover {
-            color: #0A2D50;
-            background: #FFF;
-            border-color: #FFF;
+            color: #FFF;
+            background: #1b8c9c;
+            border-color: #1b8c9c;
             text-decoration: none;
             outline: none; }
   .l-text .l-main .l-credit {

@@ -1009,9 +1009,9 @@ body {
             text-decoration: none;
             outline: none; }
           .l-header .l-user .menu li a:active, .l-header .l-user .menu li a:focus, .l-header .l-user .menu li a:hover {
-            color: #0A2D50;
-            background: #FFF;
-            border-color: #FFF;
+            color: #FFF;
+            background: #1b8c9c;
+            border-color: #1b8c9c;
             text-decoration: none;
             outline: none; }
 
@@ -1354,9 +1354,9 @@ body {
         text-decoration: none;
         outline: none; }
       .l-main .l-region--sidebar .block--dandelion-notes-admin a:active, .l-main .l-region--sidebar .block--dandelion-notes-admin a:focus, .l-main .l-region--sidebar .block--dandelion-notes-admin a:hover {
-        color: #0A2D50;
-        background: #FFF;
-        border-color: #FFF;
+        color: #FFF;
+        background: #1b8c9c;
+        border-color: #1b8c9c;
         text-decoration: none;
         outline: none; }
   .l-footer {

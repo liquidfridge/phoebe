@@ -122,7 +122,7 @@
 }
 
 @mixin button-primary-small-inverse {
-  @include button(12px, $white, $dark-sky, $dark-sky, $navy, $white, $white);
+  @include button(12px, $navy, $white, $white, $white, $dark-sky, $dark-sky);
   @include button-small;
   @include button-round-small;
   font-weight: normal;
@@ -136,7 +136,7 @@
 }
 
 @mixin button-primary-small-outline-inverse {
-  @include button(12px, $white, transparent, $white, $navy, $white, $white);
+  @include button(12px, $white, transparent, $white, $white, $dark-sky, $dark-sky);
   @include button-small;
   @include button-round-small;
   font-weight: normal;
@@ -150,17 +150,24 @@
 }
 
 @mixin button-primary-medium-inverse {
-  @include button(13px, $white, $dark-sky, $dark-sky, $navy, $white, $white);
+  @include button(13px, $navy, $white, $white, $white, $dark-sky, $dark-sky);
   @include button-medium;
   @include button-round-medium;
   font-weight: bold;
 }
 
 @mixin button-primary-medium-outline-inverse {
-  @include button(13px, $white, transparent, $white, $navy, $white, $white);
+  @include button(13px, $white, transparent, $white, $white, $dark-sky, $dark-sky);
   @include button-medium;
   @include button-round-medium;
   font-weight: bold;
+}
+
+@mixin button-secondary-small-inverse {
+  @include button(12px, $white, $dark-sky, $dark-sky, $white, $dark-sky, $dark-sky);
+  @include button-small;
+  @include button-round-small;
+  font-weight: normal;
 }
 
 @mixin button-secondary-small-outline {
@@ -171,14 +178,21 @@
 }
 
 @mixin button-secondary-small-outline-inverse {
-  @include button(12px, $light-sky, transparent, $light-sky, $navy, $white, $white);
+  @include button(12px, $light-sky, transparent, $light-sky, $white, $dark-sky, $dark-sky);
   @include button-small;
   @include button-round-small;
   font-weight: normal;
 }
 
+@mixin button-secondary-medium-inverse {
+  @include button(13px, $white, $dark-sky, $dark-sky, $white, $dark-sky, $dark-sky);
+  @include button-medium;
+  @include button-round-medium;
+  font-weight: bold;
+}
+
 @mixin button-secondary-medium-outline-inverse {
-  @include button(13px, $light-sky, transparent, $light-sky, $navy, $white, $white);
+  @include button(13px, $light-sky, transparent, $light-sky, $white, $dark-sky, $dark-sky);
   @include button-medium;
   @include button-round-medium;
   font-weight: bold;
