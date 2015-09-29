@@ -112,6 +112,13 @@ Pass any number of seconds referring to the duration of one full rotation for an
 .l-region--notes-book-title h6 {
   margin-top: 0; }
 
+.l-region--notes-book-body a {
+  text-decoration: underline; }
+  .l-region--notes-book-body a:visited {
+    text-decoration: underline; }
+  .l-region--notes-book-body a:active, .l-region--notes-book-body a:focus, .l-region--notes-book-body a:hover {
+    text-decoration: none; }
+
 .l-region--notes-book-body figure {
   text-align: center; }
   .l-region--notes-book-body figure figcaption {
@@ -159,22 +166,27 @@ Pass any number of seconds referring to the duration of one full rotation for an
       list-style: square;
       margin-left: 1.5em;
       padding: 0; }
-    .l-region--notes-book-toc .menu a.active {
-      color: #222;
-      font-weight: bold;
-      text-decoration: none; }
-      .l-region--notes-book-toc .menu a.active:visited {
-        color: #222; }
-      .l-region--notes-book-toc .menu a.active:focus {
-        color: #222; }
-      .l-region--notes-book-toc .menu a.active:hover {
-        color: #222; }
-      .l-region--notes-book-toc .menu a.active:active {
-        color: #222; }
-      .l-region--notes-book-toc .menu a.active:visited {
-        text-decoration: none; }
-      .l-region--notes-book-toc .menu a.active:active, .l-region--notes-book-toc .menu a.active:focus, .l-region--notes-book-toc .menu a.active:hover {
-        text-decoration: underline; }
+    .l-region--notes-book-toc .menu a {
+      color: #1b8c9c; }
+      .l-region--notes-book-toc .menu a:visited {
+        color: #1b8c9c; }
+      .l-region--notes-book-toc .menu a:focus {
+        color: #1b8c9c; }
+      .l-region--notes-book-toc .menu a:hover {
+        color: #1b8c9c; }
+      .l-region--notes-book-toc .menu a:active {
+        color: #1b8c9c; }
+      .l-region--notes-book-toc .menu a.active {
+        color: #222;
+        font-weight: bold; }
+        .l-region--notes-book-toc .menu a.active:visited {
+          color: #222; }
+        .l-region--notes-book-toc .menu a.active:focus {
+          color: #222; }
+        .l-region--notes-book-toc .menu a.active:hover {
+          color: #222; }
+        .l-region--notes-book-toc .menu a.active:active {
+          color: #222; }
 
 .l-region--notes-book-nav {
   clear: both; }
@@ -201,3 +213,5 @@ Pass any number of seconds referring to the duration of one full rotation for an
     display: none; }
   .l-region--notes-book-nav {
     display: none; } }
+
+/*# sourceMappingURL=../../layouts/notes_book/notes_book.layout.css.map */

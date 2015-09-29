@@ -20,7 +20,7 @@ input[type="tel"],
 input[type="text"] {
   @include font-size(14px);
   background: $white;
-  border: 1px solid $light-grey;
+  border: 2px solid $light-grey;
   padding: ($vert-spacing-unit * 0.5) ($horz-spacing-unit * 0.5);
 
   &.error {
@@ -28,7 +28,7 @@ input[type="text"] {
   }
 
   &:focus {
-    border-color: $black;
+    border-color: $dark-sky;
     outline: none;
   }
 }
@@ -40,7 +40,7 @@ select {
 textarea {
   @include font-size(14px);
   background: $white;
-  border: 1px solid $light-grey;
+  border: 2px solid $light-grey;
   padding: ($vert-spacing-unit * 0.75) ($horz-spacing-unit * 0.75);
 
   &.error {
@@ -48,7 +48,7 @@ textarea {
   }
 
   &:focus {
-    border-color: $black;
+    border-color: $dark-sky;
     outline: none;
   }
 }
@@ -58,9 +58,7 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  @include button(13px, $white, $navy, $navy, $white, $sky, $sky);
-  @include button-medium;
-  @include button-round-medium;
+  @include button-primary-medium;
 }
 
 .form-item label:not(.option),

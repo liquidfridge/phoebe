@@ -7,9 +7,15 @@ function phoebe_preprocess_comment(&$variables) {
   $comment = $variables['elements']['#comment'];
 
   if (empty($comment->in_preview)) {
-    $variables['content']['links']['comment']['#links']['comment-delete']['title'] = t('Delete');
-    $variables['content']['links']['comment']['#links']['comment-edit']['title'] = t('Edit');
-    $variables['content']['links']['comment']['#links']['comment-reply']['title'] = t('Reply');
+    if (isset($variables['content']['links']['comment']['#links']['comment-delete'])) {
+      $variables['content']['links']['comment']['#links']['comment-delete']['title'] = t('Delete');
+    }
+    if (isset($variables['content']['links']['comment']['#links']['comment-edit'])) {
+      $variables['content']['links']['comment']['#links']['comment-edit']['title'] = t('Edit');
+    }
+    if (isset($variables['content']['links']['comment']['#links']['comment-reply'])) {
+      $variables['content']['links']['comment']['#links']['comment-reply']['title'] = t('Reply');
+    }
   }
 
   $uri = entity_uri('comment', $comment);

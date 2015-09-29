@@ -11,28 +11,47 @@ render($page['content']['metatags']);
   }
   ?>></div>
   <div class="l-text">
-    <div class="l-constrained">
-      <header class="l-header" role="banner">
+    <header class="l-header" role="banner">
+      <div class="l-constrained">
+        <?php if (!empty($user_menu)): ?>
+          <div class="l-user">
+            <?php
+            print theme('links', array(
+              'links' => $user_menu,
+              'attributes' => array(
+                'class' => array('menu'),
+              ),
+              'heading' => array(
+                'text' => t('User menu'),
+                'level' => 'h2',
+                'class' => array('element-invisible'),
+              ),
+            ));
+            ?>
+          </div>
+        <?php endif; ?>
+      </div>
+    </header>
+
+    <div class="l-main">
+      <div class="l-constrained">
         <h1 class="l-site-name">
           <?php print render($page['content']['site_name']); ?><span class="blinking-cursor"></span>
         </h1>
-      </header>
 
-      <div class="l-main">
         <?php print render($page['content']['front_body']); ?>
 
         <div class="l-menu">
           <?php print render($page['content']['front_menu']); ?>
         </div>
-      </div>
 
-      <?php if ($page['content']['front_footer']): ?>
-        <footer class="l-footer" role="contentinfo">
+        <?php if ($page['content']['front_footer']): ?>
           <div class="l-credit">
             <?php print render($page['content']['front_footer']); ?>
           </div>
-        </footer>
-      <?php endif; ?>
+        <?php endif; ?>
+      </div>
     </div>
   </div>
+</div>
 </div>

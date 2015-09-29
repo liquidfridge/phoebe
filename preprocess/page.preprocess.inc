@@ -4,12 +4,21 @@
  * Implements hook_preprocess_page().
  */
 function phoebe_preprocess_page(&$variables) {
+  global $theme;
   global $user;
 
   $theme_path = drupal_get_path('theme', 'phoebe');
   $theme_url = url($theme_path);
 
+  // Add theme settings.
+  drupal_add_js(array(
+    $theme => array(
+      'path' => $theme_path,
+      'url' => $theme_url,
+    )), 'setting');
+
   // Build menus.
+  $variables['footer_menu'] = menu_tree('menu-footer-menu');
   $user_menu = array();
   $path = current_path();
 
@@ -79,5 +88,15 @@ function phoebe_preprocess_page(&$variables) {
       'group' => CSS_THEME,
       'weight' => -100,
     ));
+
+    // Header image.
+    $url = NULL;
+    $fid = variable_get('dandelion_front_page_image');
+    if (!empty($fid)) {
+      if (($file = file_load($fid)) !== FALSE) {
+        $url = file_create_url($file->uri);
+      }
+    }
+    $variables['page']['header_image'] = $url;
   }
 }

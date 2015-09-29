@@ -15,6 +15,7 @@ $navy-grey     : mix($navy, $lightest-grey, 30%);
 
 $sky           : #20A3B6;
 $light-sky     : lighten($sky, 10%);
+$dark-sky      : darken($sky, 6%);
 
 $lemon         : #F9EC38;
 $light-lemon   : mix($white, $lemon, 75%);

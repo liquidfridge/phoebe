@@ -20,15 +20,15 @@ body {
  * Links
  */
 a {
-  @include link-colors($sky, $sky, $sky, $sky, $sky);
-  text-decoration: underline;
+  @include link-colors($dark-sky, $dark-sky, $dark-sky, $dark-sky, $dark-sky);
+  text-decoration: none;
 
   &:visited {
-    text-decoration: underline;
+    text-decoration: none;
   }
 
   &:active, &:focus, &:hover {
-    text-decoration: none;
+    text-decoration: underline;
   }
 }
 

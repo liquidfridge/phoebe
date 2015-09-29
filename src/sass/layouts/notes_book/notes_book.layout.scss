@@ -32,6 +32,18 @@
 }
 
 .l-region--notes-book-body {
+  a {
+    text-decoration: underline;
+
+    &:visited {
+      text-decoration: underline;
+    }
+
+    &:active, &:focus, &:hover {
+      text-decoration: none;
+    }
+  }
+
   figure {
     text-align: center;
 
@@ -87,18 +99,11 @@
     }
 
     a {
+      @include link-colors($dark-sky, $dark-sky, $dark-sky, $dark-sky, $dark-sky);
+
       &.active {
         @include link-colors($black, $black, $black, $black, $black);
         font-weight: bold;
-        text-decoration: none;
-
-        &:visited {
-          text-decoration: none;
-        }
-
-        &:active, &:focus, &:hover {
-          text-decoration: underline;
-        }
       }
     }
   }

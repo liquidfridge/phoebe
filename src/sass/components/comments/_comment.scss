@@ -69,7 +69,7 @@
   }
 
   a.username {
-    @include link-colors($black, $sky, $sky, $black, $sky);
+    @include link-colors($black, $dark-sky, $dark-sky, $black, $dark-sky);
   }
 
   .permalink {
@@ -82,6 +82,18 @@
 }
 
 .comment__content {
+  a {
+    text-decoration: underline;
+
+    &:visited {
+      text-decoration: underline;
+    }
+
+    &:active, &:focus, &:hover {
+      text-decoration: none;
+    }
+  }
+
   p,
   ol,
   ul {
@@ -96,10 +108,7 @@
 .talk-page > .links a,
 .comment__links a,
 .ckeditor_links {
-  @include button(12px, $grey, $white, $light-grey, $white, $sky, $sky);
-  @include button-small;
-  @include button-round-small;
-  font-weight: normal;
+  @include button-secondary-small-outline;
 }
 
 .ckeditor_links {

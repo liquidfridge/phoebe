@@ -1,11 +1,26 @@
 <div class="l-page">
-  <header class="l-header" role="banner">
+  <header class="l-header" role="banner"<?php
+  if ($page['header_image']) {
+    print drupal_attributes(array(
+      'style' => 'background-image: url(' . $page['header_image'] . ');',
+    ));
+  }
+  ?>>
     <div class="l-constrained">
       <div class="l-masthead">
         <div class="l-branding">
-          <h1 class="l-site-name">
-            <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
-          </h1>
+          <div class="l-logo">
+            <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="icon-home">
+              <?php
+              print phoebe_icon(array(
+                'id' => 'home',
+                'color' => 'white',
+                'hover_color' => 'navy',
+                'title' => t('Home'),
+              ));
+              ?>
+            </a>
+          </div>
         </div>
         <?php print render($page['navigation']); ?>
       </div>

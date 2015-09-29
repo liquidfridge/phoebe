@@ -11,11 +11,21 @@ core = 7.x
 stylesheets[all][] = css/phoebe.normalize.css
 stylesheets[all][] = css/phoebe.styles.css
 stylesheets[all][] = css/phoebe.no-query.css
+stylesheets[all][] = libraries/rh-icon/dist/css/rh-icon.css
 
 ; ========================================
 ; Scripts
 ; ========================================
 scripts[] = js/vendor/modernizr/modernizr.js
+scripts[] = libraries/lodash/lodash.min.js
+scripts[] = js/globals.min.js
+scripts[] = libraries/html5shiv/html5shiv-printshiv.min.js
+scripts[] = libraries/respond/respond.min.js
+scripts[] = libraries/fastclick/lib/fastclick.js
+scripts[] = libraries/q/q.min.js
+scripts[] = libraries/rhea/dist/js/rhea.min.js
+scripts[] = libraries/rh-icon/dist/js/rh-icon.min.js
+scripts[] = js/phoebe.min.js
 
 ; ========================================
 ; Regions
@@ -50,8 +60,10 @@ multipliers[small][] = 2x
 ; ========================================
 ; Icon settings
 ; ========================================
-settings[icon][colors][black] = #000
+settings[icon][colors][black] = #222
 settings[icon][colors][white] = #FFF
+settings[icon][colors][light-sky] = #2FC5DA
+settings[icon][colors][navy] = #0A2D50
 settings[icon][prefix] = icon
 settings[icon][size] = 256
 

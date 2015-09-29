@@ -26,11 +26,19 @@ body {
 
   .l-masthead {
     @include grid-span(6, 1);
+    @include rhythm(0.25, 0, 0, 0.25);
 
     .l-branding {
+      .l-logo {
+        a[class^="icon-"], a[class*=" icon-"] {
+          @include font-size(30px);
+          line-height: 1;
+        }
+      }
+
       .l-site-name {
         @include font-size(20px);
-        @include rhythm(0.3, 0, 0, 0.3);
+        @include rhythm(0, 0, 0, 0);
         line-height: 1.2;
         font-family: $monospace;
 
@@ -105,7 +113,6 @@ body {
     @include rhythm(0.25, 0, 0, 0.25);
 
     .menu {
-      @include font-size(12px);
       list-style: none;
       margin: 0;
       padding: 0;
@@ -118,25 +125,28 @@ body {
         padding: 0;
 
         a {
-          display: inline-block;
-          @include link-colors($white, $navy, $navy, $white, $navy);
-          text-decoration: none;
-          @include border-radius($border-radius-small);
-          border: 1px solid $white;
-          padding: ($vert-spacing-unit * 0.5) ($horz-spacing-unit);
-          text-transform: uppercase;
-
-          &:visited {
-            text-decoration: none;
-          }
-
-          &:active, &:focus, &:hover {
-            text-decoration: none;
-            background: $white;
-          }
+          @include button-primary-small-outline-inverse;
         }
       }
     }
+  }
+}
+
+.no-bgsizecover {
+  .l-header {
+    background-image: none;
+  }
+}
+
+.bgsizecover {
+  .l-header {
+    background-repeat: no-repeat;
+    background-position: 50% 100%;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
   }
 }
 
@@ -201,6 +211,7 @@ body {
 
           &:active, &:focus, &:hover {
             background: $lighter-grey;
+            text-decoration: none;
           }
 
           &.active {
@@ -253,7 +264,7 @@ body {
     margin: 0 auto;
   }
 
-  a:not(.icon) {
+  a {
     @include link-colors($light-sky, $light-sky, $light-sky, $light-sky, $light-sky);
 
     text-decoration: none;
@@ -295,14 +306,31 @@ body {
       }
     }
 
-    a.icon {
-      @include link-colors($light-sky, $white, $white, $light-sky, $white);
-    }
-
-    [class^="icon-"], [class*=" icon-"] {
+    a[class^="icon-"], a[class*=" icon-"] {
       @include font-size(30px);
+      line-height: 1;
     }
   }
+}
+
+/*----------------------------------------------------------------------
+>= 752
+----------------------------------------------------------------------*/
+
+@include breakpoint($medium) {
+
+  .l-main {
+    .l-content {
+      .l-constrained {
+        padding: ($vert-spacing-unit * 3.5) 0 ($vert-spacing-unit * 2);
+      }
+    }
+  }
+
+  .l-footer {
+    padding: ($vert-spacing-unit * 1.5) 0;
+  }
+
 }
 
 /*----------------------------------------------------------------------
@@ -320,13 +348,13 @@ body {
 
     .l-masthead {
       @include grid-span(12, 1);
+      @include rhythm(0.9, 0, 0, 0.9);
 
       .l-branding {
         float: left;
 
         .l-site-name {
           @include font-size(28px);
-          @include rhythm(0.3, 0, 0, 0.3);
         }
       }
 
@@ -347,7 +375,7 @@ body {
 
     .l-user {
       @include grid-span(4, 13);
-      @include rhythm(0.75, 0, 0, 0.75);
+      @include rhythm(0.9, 0, 0, 0.9);
     }
   }
 
@@ -441,10 +469,7 @@ body {
         }
 
         a {
-          @include button(12px, $light-sky, transparent, $light-sky, $navy, $white, $white);
-          @include button-small;
-          @include button-round-small;
-          font-weight: normal;
+          @include button-secondary-small-outline-inverse;
         }
       }
     }

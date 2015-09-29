@@ -20,6 +20,15 @@ var svgstore = require('gulp-svgstore');
 var template = require('gulp-template');
 var uglify = require('gulp-uglify');
 
+var pkg = require('./package.json');
+var banner = '/* <%= pkg.name %> <%= pkg.version %> (build <%= moment().toISOString() %>) */\n';
+
+var jsSrc = [
+  'src/js/phoebe.js',
+  'src/js/config.js',
+  'src/js/init.js'
+];
+
 var sassParams = {
   includePaths: [
     'libraries/normalize-scss/',
@@ -33,9 +42,6 @@ var sassParams = {
   errLogToConsole: true
 };
 
-var pkg = require('./package.json');
-var banner = '/* <%= pkg.name %> <%= pkg.version %> (build <%= moment().toISOString() %>) */\n';
-
 gulp.task('modernizr', function (cb) {
   gulp.src('src/sass/**/*.scss')
       .pipe(modernizr({
@@ -44,7 +50,6 @@ gulp.task('modernizr', function (cb) {
         'options': [
           'setClasses',
           'addTest',
-          'html5printshiv',
           'testProp',
           'fnBind'
         ],
@@ -66,16 +71,6 @@ gulp.task('sass:ckeditor', function (cb) {
       .on('end', cb);
 });
 
-gulp.task('sass:prod', function (cb) {
-  gulp.src(['!src/sass/ckeditor/*.scss', 'src/sass/**/*.scss'])
-      .pipe(sass(sassParams).on('error', sass.logError))
-      .pipe(autoprefixer({
-        browsers: ['last 2 versions', 'ie >= 8', 'ff >= 5', 'chrome >= 20', 'opera >= 12', 'safari >= 4', 'ios >= 6', 'android >= 2', 'bb >= 6']
-      }))
-      .pipe(gulp.dest('css'))
-      .on('end', cb);
-});
-
 gulp.task('sass:dev', function (cb) {
   gulp.src(['!src/sass/ckeditor/*.scss', 'src/sass/**/*.scss'])
       .pipe(sourcemaps.init())
@@ -88,9 +83,77 @@ gulp.task('sass:dev', function (cb) {
       .on('end', cb);
 });
 
-gulp.task('js', function (cb) {
-  gulp.src(['src/js/**/*.*'], {base: 'src'})
-      .pipe(gulp.dest('.'))
+gulp.task('sass:prod', function (cb) {
+  gulp.src(['!src/sass/ckeditor/*.scss', 'src/sass/**/*.scss'])
+      .pipe(sass(sassParams).on('error', sass.logError))
+      .pipe(autoprefixer({
+        browsers: ['last 2 versions', 'ie >= 8', 'ff >= 5', 'chrome >= 20', 'opera >= 12', 'safari >= 4', 'ios >= 6', 'android >= 2', 'bb >= 6']
+      }))
+      .pipe(gulp.dest('css'))
+      .on('end', cb);
+});
+
+gulp.task('js-globals:dev', function (cb) {
+  gulp.src('src/js/globals.js')
+      .pipe(sourcemaps.init())
+      .pipe(concat('globals.js'))
+      .pipe(gulp.dest('js'))
+      .pipe(rename('globals.min.js'))
+      .pipe(uglify())
+      .pipe(sourcemaps.write('.'))
+      .pipe(gulp.dest('js'))
+      .on('end', cb);
+});
+
+gulp.task('js-phoebe:dev', function (cb) {
+  gulp.src(jsSrc)
+      .pipe(sourcemaps.init())
+      .pipe(concat('phoebe.js'))
+      .pipe(gulp.dest('js'))
+      .pipe(rename('phoebe.min.js'))
+      .pipe(uglify())
+      .pipe(sourcemaps.write('.'))
+      .pipe(gulp.dest('js'))
+      .on('end', cb);
+});
+
+gulp.task('js-phoebe:prod', function (cb) {
+  gulp.src(jsSrc)
+      .pipe(concat('phoebe.js'))
+      .pipe(gulp.dest('js'))
+      .pipe(rename('phoebe.min.js'))
+      .pipe(uglify())
+      .pipe(gulp.dest('js'))
+      .on('end', cb);
+});
+
+gulp.task('svg', function (cb) {
+  gulp.src('src/svg/**/*.svg')
+      .pipe(svgmin({
+        plugins: [
+          {
+            removeDesc: true
+          },
+          {
+            removeTitle: true
+          }
+        ]
+      }))
+      .pipe(svgstore())
+      .pipe(replace({
+        patterns: [
+          {
+            match: /<\?xml.*?\?>/gi,
+            replace: ''
+          },
+          {
+            match: /<\!doctype.*?>/gi,
+            replace: ''
+          }
+        ]
+      }))
+      .pipe(rename('icon.svg'))
+      .pipe(gulp.dest('svg'))
       .on('end', cb);
 });
 
@@ -102,7 +165,11 @@ gulp.task('dev:css', ['sass:dev', 'sass:ckeditor'], function (cb) {
   run('bash sync.sh css 1').exec(cb);
 });
 
-gulp.task('dev:js', ['js'], function (cb) {
+gulp.task('dev:js', ['js-globals:dev', 'js-phoebe:dev'], function (cb) {
+  run('bash sync.sh js 1').exec(cb);
+});
+
+gulp.task('dev:svg', ['svg'], function (cb) {
   run('bash sync.sh js 1').exec(cb);
 });
 
@@ -130,6 +197,7 @@ gulp.task('watch', function () {
 //  gulp.watch(['!tmp', 'src/sass/ckeditor/*.scss'], ['dev:ckeditor']);
   gulp.watch(['!tmp', 'src/sass/**/*.scss'], ['dev:css']);
   gulp.watch(['!tmp', 'src/js/**/*.js'], ['dev:js']);
+  gulp.watch(['!tmp', 'src/svg/**/*.svg'], ['dev:svg']);
   gulp.watch(['!tmp', '**/*.inc', '**/*.info', '**/*.make', '**/*.php'], ['sync:php']);
 });
 

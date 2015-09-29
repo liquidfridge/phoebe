@@ -32,6 +32,18 @@
 }
 
 .l-region--page-body {
+  a {
+    text-decoration: underline;
+
+    &:visited {
+      text-decoration: underline;
+    }
+
+    &:active, &:focus, &:hover {
+      text-decoration: none;
+    }
+  }
+
   figure {
     text-align: center;
 
