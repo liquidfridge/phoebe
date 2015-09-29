@@ -135,9 +135,21 @@ body {
     height: 100%;
   }
 
+  .l-text {
+    margin-left: 50%;
+
+    .l-main {
+      width: 72%;
+
+      .l-constrained {
+        max-width: 30em;
+      }
+    }
+  }
+
   .no-bgsizecover {
     .l-image {
-      background-image: none;
+      background-image: none !important;
     }
   }
 
@@ -152,18 +164,8 @@ body {
       -o-background-size: cover;
       background-size: cover;
     }
-  }
 
-  .l-text {
-    margin-left: 50%;
-
-    .l-main {
-      width: 72%;
-
-      .l-constrained {
-        max-width: 30em;
-      }
-
+    .l-text {
       .l-credit {
         display: block;
       }

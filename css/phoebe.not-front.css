@@ -1016,7 +1016,7 @@ body {
             outline: none; }
 
 .no-bgsizecover .l-header {
-  background-image: none; }
+  background-image: none !important; }
 
 .bgsizecover .l-header {
   background-repeat: no-repeat;

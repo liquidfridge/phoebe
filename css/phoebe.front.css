@@ -1034,19 +1034,19 @@ body {
     position: fixed;
     width: 50%;
     height: 100%; }
-  .no-bgsizecover .l-image {
-    background-image: none; }
-  .bgsizecover .l-image {
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-attachment: fixed;
-    -webkit-background-size: cover;
-    background-size: cover; }
   .l-text {
     margin-left: 50%; }
     .l-text .l-main {
       width: 72%; }
       .l-text .l-main .l-constrained {
         max-width: 30em; }
-      .l-text .l-main .l-credit {
-        display: block; } }
+  .no-bgsizecover .l-image {
+    background-image: none !important; }
+  .bgsizecover .l-image {
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    background-size: cover; }
+  .bgsizecover .l-text .l-credit {
+    display: block; } }
