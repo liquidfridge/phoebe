@@ -45,7 +45,7 @@
     </div>
   </header>
 
-  <div class="l-main">
+  <div class="l-main" id="main-content">
     <div class="l-content" role="main">
       <div class="l-constrained">
         <?php print render($page['highlighted']); ?>

@@ -33,7 +33,7 @@ render($page['content']['metatags']);
       </div>
     </header>
 
-    <div class="l-main">
+    <div class="l-main" id="main-content">
       <div class="l-constrained">
         <h1 class="l-site-name">
           <?php print render($page['content']['site_name']); ?><span class="blinking-cursor"></span>
