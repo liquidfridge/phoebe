@@ -20,17 +20,23 @@ xxlarge    | 1010             | 1200 (2400)
 
 
 
-## Usage
+## Development
+
+Install:
+
+```
+npm install
+bower install
+```
+
+Watch for file changes:
 
 ```
 gulp
 ```
 
-
-
-## Install
+Build for production:
 
 ```
-npm install
-bower install
+gulp prod
 ```

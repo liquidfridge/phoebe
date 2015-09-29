@@ -23,16 +23,6 @@ function do_css_sync () {
 	fi
 }
 
-function do_js_sync () {
-	rsync --exclude '.git/' --exclude '.sass-cache/' --exclude 'node_modules/' --archive --delete --compress --chmod=ugo=rwX "${SRC}" "${DST}"
-
-	if [ "${1}" = "1" ]; then
-		ssh "${VMNAME}.local" 'cd /var/www/domains/'"${DOMAIN}"'/html/drupal && source ~/.bash_profile && drush cc css-js'
-	else
-		echo "Synced CSS and JS files."
-	fi
-}
-
 function do_php_sync () {
     rsync --exclude '.git/' --exclude '.sass-cache/' --exclude 'node_modules/' --archive --delete --compress --chmod=ugo=rwX "${SRC}" "${DST}"
 
@@ -50,10 +40,6 @@ case $CMD in
         ;;
     "css")
         do_css_sync "${CLEAR_CACHE}"
-        exit 0
-        ;;
-    "js")
-        do_js_sync "${CLEAR_CACHE}"
         exit 0
         ;;
     "php")

@@ -105,6 +105,16 @@ gulp.task('js-globals:dev', function (cb) {
       .on('end', cb);
 });
 
+gulp.task('js-globals:prod', function (cb) {
+  gulp.src('src/js/globals.js')
+      .pipe(concat('globals.js'))
+      .pipe(gulp.dest('js'))
+      .pipe(rename('globals.min.js'))
+      .pipe(uglify())
+      .pipe(gulp.dest('js'))
+      .on('end', cb);
+});
+
 gulp.task('js-phoebe:dev', function (cb) {
   gulp.src(jsSrc)
       .pipe(sourcemaps.init())
@@ -157,22 +167,6 @@ gulp.task('svg', function (cb) {
       .on('end', cb);
 });
 
-gulp.task('dev:ckeditor', ['sass:ckeditor'], function (cb) {
-  run('bash sync.sh css 1').exec(cb);
-});
-
-gulp.task('dev:css', ['sass:dev', 'sass:ckeditor'], function (cb) {
-  run('bash sync.sh css 1').exec(cb);
-});
-
-gulp.task('dev:js', ['js-globals:dev', 'js-phoebe:dev'], function (cb) {
-  run('bash sync.sh js 1').exec(cb);
-});
-
-gulp.task('dev:svg', ['svg'], function (cb) {
-  run('bash sync.sh js 1').exec(cb);
-});
-
 gulp.task('clean:init', function (cb) {
   del(['css', 'img/icon', 'js', 'svg'], cb);
 });
@@ -181,24 +175,47 @@ gulp.task('clean:exit', function (cb) {
   del(['build', 'tmp'], cb);
 });
 
-//gulp.task('sync', function (cb) {
-//  run('bash sync.sh css 1').exec(cb);
-//});
-//
-//gulp.task('build:dev', function (cb) {
-//  runSequence('clean:init', 'sass:dev', 'js', 'sync', 'clean:exit', cb);
-//});
+gulp.task('sync', function (cb) {
+  runSequence('sync:css', 'sync:php', cb);
+});
+
+gulp.task('sync:css', function (cb) {
+  run('bash sync.sh css 1').exec(cb);
+});
 
 gulp.task('sync:php', function (cb) {
   run('bash sync.sh php 1').exec(cb);
 });
 
+gulp.task('dev', function (cb) {
+  runSequence('clean:init', 'sass:dev', 'sass:ckeditor', 'js-globals:dev', 'js-phoebe:dev', 'svg', 'sync', 'clean:exit', cb);
+});
+
+gulp.task('dev:ckeditor', ['sass:ckeditor'], function (cb) {
+  runSequence('sync:css', 'sync:php', cb);
+});
+
+gulp.task('dev:css', ['sass:dev', 'sass:ckeditor'], function (cb) {
+  runSequence('sync:css', 'sync:php', cb);
+});
+
+gulp.task('dev:js', ['js-globals:dev', 'js-phoebe:dev'], function (cb) {
+  runSequence('sync:css', 'sync:php', cb);
+});
+
+gulp.task('dev:svg', ['svg'], function (cb) {
+  runSequence('sync:css', 'sync:php', cb);
+});
+
+gulp.task('prod', function (cb) {
+  runSequence('clean:init', 'sass:prod', 'sass:ckeditor', 'js-globals:prod', 'js-phoebe:prod', 'svg', 'clean:exit', cb);
+});
+
 gulp.task('watch', function () {
-//  gulp.watch(['!tmp', 'src/sass/ckeditor/*.scss'], ['dev:ckeditor']);
   gulp.watch(['!tmp', 'src/sass/**/*.scss'], ['dev:css']);
   gulp.watch(['!tmp', 'src/js/**/*.js'], ['dev:js']);
   gulp.watch(['!tmp', 'src/svg/**/*.svg'], ['dev:svg']);
   gulp.watch(['!tmp', '**/*.inc', '**/*.info', '**/*.make', '**/*.php'], ['sync:php']);
 });
 
-gulp.task('default', ['sass:dev', 'watch']);
+gulp.task('default', ['dev', 'watch']);
