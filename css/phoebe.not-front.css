@@ -233,7 +233,7 @@ input[type="submit"] {
   padding-top: 0em;
   padding-bottom: 0em;
   margin-bottom: 0.375em;
-  line-height: 1.6;
+  line-height: 1.5;
   font-family: Helvetica, Arial, sans-serif;
   font-weight: bold; }
 
@@ -261,7 +261,7 @@ input[type="radio"] + label.option {
   padding-top: 0em;
   padding-bottom: 0em;
   margin-bottom: 0.375em;
-  line-height: 1.6; }
+  line-height: 1.5; }
 
 /**
  * @file
@@ -306,7 +306,7 @@ ul {
   padding-top: 0em;
   padding-bottom: 0em;
   margin-bottom: 1.875em;
-  line-height: 1.6; }
+  line-height: 1.5; }
 
 li {
   margin-top: 0.375em;
@@ -424,7 +424,7 @@ h6 {
   padding-top: 0em;
   padding-bottom: 0em;
   margin-bottom: 1.125em;
-  line-height: 1.6;
+  line-height: 1.5;
   font-family: Helvetica, Arial, sans-serif;
   font-weight: bold; }
   h1 a,
@@ -481,7 +481,7 @@ blockquote {
   padding-top: 0em;
   padding-bottom: 0em;
   margin-bottom: 1.875em;
-  line-height: 1.6; }
+  line-height: 1.5; }
 
 p + img {
   float: left;
@@ -807,7 +807,7 @@ div.krumo-root {
 .messages {
   font-size: 13px;
   font-size: 0.92857rem;
-  line-height: 1.6;
+  line-height: 1.5;
   font-family: Helvetica, Arial, sans-serif;
   font-weight: bold;
   padding: 1em 1em;
@@ -837,7 +837,7 @@ div.krumo-root {
 .messages-inline {
   font-size: 13px;
   font-size: 0.92857rem;
-  line-height: 1.6;
+  line-height: 1.5;
   font-weight: normal;
   font-style: italic;
   text-transform: none;

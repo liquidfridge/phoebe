@@ -607,7 +607,7 @@ input[type="submit"] {
   padding-top: 0em;
   padding-bottom: 0em;
   margin-bottom: 0.375em;
-  line-height: 1.6;
+  line-height: 1.5;
   font-family: Helvetica, Arial, sans-serif;
   font-weight: bold; }
 
@@ -635,7 +635,7 @@ input[type="radio"] + label.option {
   padding-top: 0em;
   padding-bottom: 0em;
   margin-bottom: 0.375em;
-  line-height: 1.6; }
+  line-height: 1.5; }
 
 /**
  * @file
@@ -680,7 +680,7 @@ ul {
   padding-top: 0em;
   padding-bottom: 0em;
   margin-bottom: 1.875em;
-  line-height: 1.6; }
+  line-height: 1.5; }
 
 li {
   margin-top: 0.375em;
@@ -798,7 +798,7 @@ h6 {
   padding-top: 0em;
   padding-bottom: 0em;
   margin-bottom: 1.125em;
-  line-height: 1.6;
+  line-height: 1.5;
   font-family: Helvetica, Arial, sans-serif;
   font-weight: bold; }
   h1 a,
@@ -855,7 +855,7 @@ blockquote {
   padding-top: 0em;
   padding-bottom: 0em;
   margin-bottom: 1.875em;
-  line-height: 1.6; }
+  line-height: 1.5; }
 
 p + img {
   float: left;

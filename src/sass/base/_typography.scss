@@ -42,7 +42,7 @@ h4,
 h5,
 h6 {
   @include rhythm(0, 0, 0, 0.75);
-  line-height: 1.6;
+  line-height: 1.5;
   font-family: $sans-serif;
   font-weight: bold;
 
@@ -90,7 +90,7 @@ p,
 %p {
   @include font-size(14px);
   @include rhythm(0, 0, 0, 1.25);
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 p + img {
