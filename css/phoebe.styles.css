@@ -502,7 +502,7 @@ blockquote {
   padding-left: 2em;
   padding-right: 2em;
   border-left: 3px solid #c8c8c8;
-  font-family: Georgia, serif;
+  font-family: Georgia, Times, "Times New Roman", serif;
   font-style: italic;
   color: #222; }
   blockquote > p:last-child,

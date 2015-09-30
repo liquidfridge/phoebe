@@ -502,7 +502,7 @@ blockquote {
   padding-left: 2em;
   padding-right: 2em;
   border-left: 3px solid #c8c8c8;
-  font-family: Georgia, serif;
+  font-family: Georgia, Times, "Times New Roman", serif;
   font-style: italic;
   color: #222; }
   blockquote > p:last-child,
@@ -924,7 +924,8 @@ body {
     padding-top: 0em;
     padding-bottom: 0em;
     margin-bottom: 0.6em;
-    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+    font-family: Georgia, Times, "Times New Roman", serif;
+    font-weight: normal; }
     .l-text .l-main .l-site-name .blinking-cursor {
       padding-left: 0.15em;
       color: #FFF;
