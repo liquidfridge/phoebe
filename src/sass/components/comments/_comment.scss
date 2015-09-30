@@ -12,7 +12,7 @@
 .comments__title,
 .comments__form-title {
   @include font-size(16px);
-  @include rhythm(2.5, 0, 0.1, 1);
+  @include rhythm(2.75, 0, 0.1, 1);
   border-bottom: 1px solid $light-grey;
   text-transform: uppercase;
 }
