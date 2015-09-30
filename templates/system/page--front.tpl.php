@@ -54,4 +54,3 @@ render($page['content']['metatags']);
     </div>
   </div>
 </div>
-</div>
