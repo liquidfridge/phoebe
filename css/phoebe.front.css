@@ -492,14 +492,15 @@ p + img {
 blockquote {
   font-size: 14px;
   font-size: 1rem;
+  line-height: 1.65;
   margin-top: 1.57143em;
-  padding-top: 1.57143em;
-  padding-bottom: 1.57143em;
+  padding-top: 1.17857em;
+  padding-bottom: 1.17857em;
   margin-bottom: 1.57143em;
   margin-left: 3em;
   margin-right: 3em;
-  padding-left: 2em;
-  padding-right: 2em;
+  padding-left: 2.5em;
+  padding-right: 2.5em;
   border-left: 3px solid #c8c8c8;
   font-family: Georgia, Times, "Times New Roman", serif;
   font-style: italic;

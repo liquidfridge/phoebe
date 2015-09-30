@@ -103,11 +103,12 @@ p + img {
 blockquote {
   @extend %p;
   @include font-size(14px);
-  @include rhythm(1, 1, 1, 1);
+  line-height: 1.65;
+  @include rhythm(1, 0.75, 0.75, 1);
   margin-left: $horz-spacing-unit * 3;
   margin-right: $horz-spacing-unit * 3;
-  padding-left: $horz-spacing-unit * 2;
-  padding-right: $horz-spacing-unit * 2;
+  padding-left: $horz-spacing-unit * 2.5;
+  padding-right: $horz-spacing-unit * 2.5;
   border-left: 3px solid $light-grey;
   font-family: $serif;
   font-style: italic;
