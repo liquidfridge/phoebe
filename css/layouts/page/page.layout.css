@@ -88,16 +88,8 @@ Pass any number of seconds referring to the duration of one full rotation for an
  */
 .l-region--page-title h1,
 .l-region--page-title h2,
-.l-region--page-title h3,
-.l-region--page-title h4,
-.l-region--page-title h5,
-.l-region--page-title h6,
 .l-region--page-body h1,
-.l-region--page-body h2,
-.l-region--page-body h3,
-.l-region--page-body h4,
-.l-region--page-body h5,
-.l-region--page-body h6 {
+.l-region--page-body h2 {
   border-bottom: 1px solid #c8c8c8; }
 
 .l-region--page-title h1,

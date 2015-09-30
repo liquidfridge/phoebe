@@ -88,16 +88,8 @@ Pass any number of seconds referring to the duration of one full rotation for an
  */
 .l-region--notes-book-title h1,
 .l-region--notes-book-title h2,
-.l-region--notes-book-title h3,
-.l-region--notes-book-title h4,
-.l-region--notes-book-title h5,
-.l-region--notes-book-title h6,
 .l-region--notes-book-body h1,
-.l-region--notes-book-body h2,
-.l-region--notes-book-body h3,
-.l-region--notes-book-body h4,
-.l-region--notes-book-body h5,
-.l-region--notes-book-body h6 {
+.l-region--notes-book-body h2 {
   border-bottom: 1px solid #c8c8c8; }
 
 .l-region--notes-book-title h1,
