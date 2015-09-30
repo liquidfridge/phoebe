@@ -131,12 +131,12 @@ ul.footnotes {
  * @file
  * Form elements.
  */
-.touch input[type="email"],
-.touch input[type="password"],
-.touch input[type="tel"],
-.touch input[type="text"],
-.touch select,
-.touch textarea {
+.touchevents input[type="email"],
+.touchevents input[type="password"],
+.touchevents input[type="tel"],
+.touchevents input[type="text"],
+.touchevents select,
+.touchevents textarea {
   font-size: 16px; }
 
 input[type="email"],

@@ -54,7 +54,8 @@ gulp.task('modernizr', function (cb) {
           'fnBind'
         ],
         'tests': [
-          'bgsizecover'
+          'bgsizecover',
+          'touchevents'
         ]
       }))
       .pipe(gulp.dest('src/js/vendor/modernizr'))
