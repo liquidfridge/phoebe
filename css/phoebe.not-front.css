@@ -443,7 +443,11 @@ h6 {
 h1 {
   font-size: 32px;
   font-size: 2.28571rem;
-  line-height: 1.2; }
+  line-height: 1.2;
+  margin-top: 1.57143em;
+  padding-top: 0em;
+  padding-bottom: 0.15714em;
+  margin-bottom: 1.17857em; }
 
 h2 {
   font-size: 24px;
