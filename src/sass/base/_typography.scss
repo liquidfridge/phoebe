@@ -158,15 +158,7 @@ div.krumo-root {
 @include breakpoint($large) {
 
   h1 {
-    @include font-size(36px);
-  }
-
-  h2 {
-    @include font-size(26px);
-  }
-
-  h3 {
-    @include font-size(20px);
+    @include font-size(34px);
   }
 
 }
