@@ -98,10 +98,6 @@ Pass any number of seconds referring to the duration of one full rotation for an
 .l-region--notes-book-body h4,
 .l-region--notes-book-body h5,
 .l-region--notes-book-body h6 {
-  margin-top: 1.5em;
-  padding-top: 0em;
-  padding-bottom: 0.15em;
-  margin-bottom: 1.125em;
   border-bottom: 1px solid #c8c8c8; }
 
 .l-region--notes-book-title h1,
@@ -135,19 +131,19 @@ Pass any number of seconds referring to the duration of one full rotation for an
     max-width: none; }
 
 .l-region--notes-book-updated {
-  margin-top: 2.25em;
+  margin-top: 2.51429em;
   padding-top: 0em;
   padding-bottom: 0em;
-  margin-bottom: 1.5em; }
+  margin-bottom: 1.57143em; }
   .l-region--notes-book-updated .pane-node-updated {
     font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace; }
     .l-region--notes-book-updated .pane-node-updated p {
       font-size: 12px;
       font-size: 0.85714rem;
-      margin-top: 1.5em;
+      margin-top: 1.57143em;
       padding-top: 0em;
       padding-bottom: 0em;
-      margin-bottom: 1.5em;
+      margin-bottom: 1.57143em;
       color: #7a7a7a; }
 
 .l-region--notes-book-toc {
@@ -191,10 +187,10 @@ Pass any number of seconds referring to the duration of one full rotation for an
 .l-region--notes-book-nav {
   clear: both; }
   .l-region--notes-book-nav .book-navigation__links {
-    margin-top: 2.25em;
-    padding-top: 0.6em;
-    padding-bottom: 0.6em;
-    margin-bottom: 1.5em;
+    margin-top: 2.35714em;
+    padding-top: 0.62857em;
+    padding-bottom: 0.62857em;
+    margin-bottom: 1.57143em;
     border: 1px solid #c8c8c8;
     border-width: 1px 0; }
     .l-region--notes-book-nav .book-navigation__links:before, .l-region--notes-book-nav .book-navigation__links:after {

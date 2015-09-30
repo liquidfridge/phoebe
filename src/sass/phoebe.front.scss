@@ -98,6 +98,7 @@ body {
         @include horizontal-list(false);
 
         li {
+          @include rhythm(0.25, 0, 0, 0.25);
           margin-right: $horz-spacing-unit;
 
           &:last-child {

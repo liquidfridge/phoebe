@@ -101,10 +101,10 @@ Pass any number of seconds referring to the duration of one full rotation for an
 ul.footnotes {
   font-size: 13px;
   font-size: 0.92857rem;
-  margin-top: 3em;
+  margin-top: 3.14286em;
   padding-top: 0em;
   padding-bottom: 0em;
-  margin-bottom: 1.5em;
+  margin-bottom: 1.57143em;
   border-top: 1px solid #c8c8c8;
   list-style: none; }
   ul.footnotes li {
@@ -232,8 +232,7 @@ input[type="submit"] {
   margin-top: 0em;
   padding-top: 0em;
   padding-bottom: 0em;
-  margin-bottom: 0.375em;
-  line-height: 1.5;
+  margin-bottom: 0.39286em;
   font-family: Helvetica, Arial, sans-serif;
   font-weight: bold; }
 
@@ -245,23 +244,22 @@ input[type="radio"] + label.option {
   margin-top: 0em;
   padding-top: 0em;
   padding-bottom: 0em;
-  margin-bottom: 1.5em; }
+  margin-bottom: 1.57143em; }
 
 .form-actions {
-  margin-top: 2.25em;
+  margin-top: 2.35714em;
   padding-top: 0em;
   padding-bottom: 0em;
-  margin-bottom: 1.5em; }
+  margin-bottom: 1.57143em; }
 
 .form-item .description,
 .form-actions .description {
   font-size: 13px;
   font-size: 0.92857rem;
-  margin-top: 0.375em;
+  margin-top: 0.39286em;
   padding-top: 0em;
   padding-bottom: 0em;
-  margin-bottom: 0.375em;
-  line-height: 1.5; }
+  margin-bottom: 0.39286em; }
 
 /**
  * @file
@@ -305,14 +303,13 @@ ul {
   margin-top: 0em;
   padding-top: 0em;
   padding-bottom: 0em;
-  margin-bottom: 1.875em;
-  line-height: 1.5; }
+  margin-bottom: 1.96429em; }
 
 li {
-  margin-top: 0.375em;
+  margin-top: 0.23571em;
   padding-top: 0em;
   padding-bottom: 0em;
-  margin-bottom: 0.375em; }
+  margin-bottom: 0.23571em; }
 
 /**
  * @file
@@ -328,7 +325,7 @@ figure {
   margin-top: 0em;
   padding-top: 0em;
   padding-bottom: 0em;
-  margin-bottom: 1.875em;
+  margin-bottom: 1.96429em;
   margin-left: 0;
   margin-right: 0; }
   figure figcaption {
@@ -383,7 +380,7 @@ a img,
 
 html {
   font-size: 14px;
-  line-height: 1.5em; }
+  line-height: 1.57143em; }
 
 /**
  * Base
@@ -420,11 +417,10 @@ h3,
 h4,
 h5,
 h6 {
-  margin-top: 0em;
+  margin-top: 1.57143em;
   padding-top: 0em;
-  padding-bottom: 0em;
-  margin-bottom: 1.125em;
-  line-height: 1.5;
+  padding-bottom: 0.15714em;
+  margin-bottom: 0.86429em;
   font-family: Helvetica, Arial, sans-serif;
   font-weight: bold; }
   h1 a,
@@ -480,8 +476,7 @@ blockquote {
   margin-top: 0em;
   padding-top: 0em;
   padding-bottom: 0em;
-  margin-bottom: 1.875em;
-  line-height: 1.5; }
+  margin-bottom: 1.96429em; }
 
 p + img {
   float: left;
@@ -493,10 +488,10 @@ p + img {
 blockquote {
   font-size: 14px;
   font-size: 1rem;
-  margin-top: 1.5em;
-  padding-top: 1.5em;
-  padding-bottom: 1.5em;
-  margin-bottom: 1.5em;
+  margin-top: 1.57143em;
+  padding-top: 1.57143em;
+  padding-bottom: 1.57143em;
+  margin-bottom: 1.57143em;
   margin-left: 3em;
   margin-right: 3em;
   padding-left: 2em;
@@ -567,10 +562,10 @@ div.krumo-root {
 .comments__form-title {
   font-size: 16px;
   font-size: 1.14286rem;
-  margin-top: 3.75em;
+  margin-top: 3.92857em;
   padding-top: 0em;
-  padding-bottom: 0.15em;
-  margin-bottom: 1.5em;
+  padding-bottom: 0.15714em;
+  margin-bottom: 1.57143em;
   border-bottom: 1px solid #c8c8c8;
   text-transform: uppercase; }
 
@@ -599,7 +594,7 @@ div.krumo-root {
   margin-top: 0em;
   padding-top: 0em;
   padding-bottom: 0em;
-  margin-bottom: 1.5em;
+  margin-bottom: 1.57143em;
   color: #7a7a7a; }
   .comment__info p {
     font-size: 12px;
@@ -807,7 +802,6 @@ div.krumo-root {
 .messages {
   font-size: 13px;
   font-size: 0.92857rem;
-  line-height: 1.5;
   font-family: Helvetica, Arial, sans-serif;
   font-weight: bold;
   padding: 1em 1em;
@@ -837,7 +831,6 @@ div.krumo-root {
 .messages-inline {
   font-size: 13px;
   font-size: 0.92857rem;
-  line-height: 1.5;
   font-weight: normal;
   font-style: italic;
   text-transform: none;

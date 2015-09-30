@@ -5,7 +5,6 @@
 
 .messages {
   @include font-size(13px);
-  line-height: 1.5;
   font-family: $sans-serif;
   font-weight: bold;
   padding: ($vert-spacing-unit) ($horz-spacing-unit);
@@ -40,7 +39,6 @@
 
 .messages-inline {
   @include font-size(13px);
-  line-height: 1.5;
   font-weight: normal;
   font-style: italic;
   text-transform: none;

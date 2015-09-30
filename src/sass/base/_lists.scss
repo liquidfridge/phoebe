@@ -5,11 +5,10 @@
 
 ol,
 ul {
-	@include font-size(14px);
-	@include rhythm(0, 0, 0, 1.25);
-	line-height: 1.5;
+  @include font-size(14px);
+  @include rhythm(0, 0, 0, 1.25);
 }
 
 li {
-	@include rhythm(0.25, 0, 0, 0.25);
+  @include rhythm(0.15, 0, 0, 0.15);
 }

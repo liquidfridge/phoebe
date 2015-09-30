@@ -15,7 +15,6 @@
   h4,
   h5,
   h6 {
-    @include rhythm(1, 0, 0.1, 0.75);
     border-bottom: 1px solid $light-grey;
   }
 }
@@ -66,7 +65,7 @@
 }
 
 .l-region--page-updated {
-  @include rhythm(1.5, 0, 0, 1);
+  @include rhythm(1.6, 0, 0, 1);
 
   .pane-node-updated {
     font-family: $monospace;
