@@ -107,6 +107,18 @@ Pass any number of seconds referring to the duration of one full rotation for an
   .l-region--notes-book-body a:active, .l-region--notes-book-body a:focus, .l-region--notes-book-body a:hover {
     text-decoration: none; }
 
+.l-region--notes-book-body a.see-footnote,
+.l-region--notes-book-body a.footnote-label {
+  text-decoration: none; }
+  .l-region--notes-book-body a.see-footnote:visited,
+  .l-region--notes-book-body a.footnote-label:visited {
+    text-decoration: none; }
+  .l-region--notes-book-body a.see-footnote:active,
+  .l-region--notes-book-body a.see-footnote:focus,
+  .l-region--notes-book-body a.see-footnote:hover,
+  .l-region--notes-book-body a.footnote-label:active, .l-region--notes-book-body a.footnote-label:focus, .l-region--notes-book-body a.footnote-label:hover {
+    text-decoration: underline; }
+
 .l-region--notes-book-body figure {
   text-align: center; }
   .l-region--notes-book-body figure figcaption {

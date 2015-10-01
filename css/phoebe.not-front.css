@@ -102,7 +102,7 @@ ul.footnotes {
   font-size: 13px;
   font-size: 0.92857rem;
   margin-top: 3.14286em;
-  padding-top: 0em;
+  padding-top: 0.39286em;
   padding-bottom: 0em;
   margin-bottom: 1.57143em;
   border-top: 1px solid #c8c8c8;
@@ -112,7 +112,7 @@ ul.footnotes {
     font-size: 0.92857rem;
     position: relative;
     margin: 0;
-    padding: 0.25em 0.5em;
+    padding: 0.15em 0.5em;
     list-style: none; }
     ul.footnotes li .footnote-label {
       position: relative;
