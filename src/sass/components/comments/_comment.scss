@@ -27,7 +27,7 @@
   padding: ($vert-spacing-unit) ($horz-spacing-unit);
 
   .new {
-    @include border-radius($border-radius-small);
+    @include border-radius($border-radius);
     @include font-size(11px);
     display: inline-block;
     padding: ($vert-spacing-unit * 0.1) ($horz-spacing-unit * 0.5);

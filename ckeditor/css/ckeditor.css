@@ -569,8 +569,8 @@ input[type="submit"] {
   text-decoration: none;
   cursor: pointer;
   padding: 0.8em 1.4em;
-  -webkit-border-radius: 0.3em;
-  border-radius: 0.3em;
+  -webkit-border-radius: 0.33em;
+  border-radius: 0.33em;
   font-weight: bold; }
   button:visited,
   .button:visited,

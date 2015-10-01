@@ -4,7 +4,7 @@
  */
 
 .filter-wrapper {
-  @include border-radius($border-radius-medium);
+  @include border-radius($border-radius);
   background: $lightest-grey;
   border: none;
   margin: ($vert-spacing-unit) 0;

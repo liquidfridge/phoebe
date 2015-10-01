@@ -157,7 +157,7 @@ body {
   .l-breadcrumb {
     background: $lighter-grey;
     padding: ($vert-spacing-unit * 0.66) ($horz-spacing-unit);
-    @include border-radius($border-radius-small);
+    @include border-radius($border-radius);
 
     .breadcrumb {
       @include font-size(13px);
@@ -206,8 +206,8 @@ body {
           background: none;
           padding: ($vert-spacing-unit * 0.6) ($horz-spacing-unit * 1.5);
           @include link-colors($sky, $black, $black, $sky, $black);
-          @include border-top-left-radius($border-radius-small);
-          @include border-top-right-radius($border-radius-small);
+          @include border-top-left-radius($border-radius);
+          @include border-top-right-radius($border-radius);
 
           &:active, &:focus, &:hover {
             background: $lighter-grey;

@@ -30,11 +30,11 @@
 }
 
 @mixin button-round-small {
-  @include border-radius($border-radius-small);
+  @include border-radius($border-radius);
 }
 
 @mixin button-round-medium {
-  @include border-radius($border-radius-small);
+  @include border-radius($border-radius);
 }
 
 @mixin button-circle {

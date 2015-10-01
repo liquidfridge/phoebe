@@ -195,8 +195,8 @@ input[type="submit"] {
   text-decoration: none;
   cursor: pointer;
   padding: 0.8em 1.4em;
-  -webkit-border-radius: 0.3em;
-  border-radius: 0.3em;
+  -webkit-border-radius: 0.33em;
+  border-radius: 0.33em;
   font-weight: bold; }
   button:visited,
   .button:visited,
@@ -576,8 +576,8 @@ div.krumo-root {
   background: #fefacd;
   padding: 1em 1em; }
   .comment--new .new {
-    -webkit-border-radius: 0.3em;
-    border-radius: 0.3em;
+    -webkit-border-radius: 0.33em;
+    border-radius: 0.33em;
     font-size: 11px;
     font-size: 0.78571rem;
     display: inline-block;
@@ -667,8 +667,8 @@ div.krumo-root {
   text-decoration: none;
   cursor: pointer;
   padding: 0.6em 0.8em;
-  -webkit-border-radius: 0.3em;
-  border-radius: 0.3em;
+  -webkit-border-radius: 0.33em;
+  border-radius: 0.33em;
   font-weight: normal; }
   .talk-page > .links a:visited,
   .comment__links a:visited,
@@ -727,8 +727,8 @@ div.krumo-root {
  * Styling for the filter module.
  */
 .filter-wrapper {
-  -webkit-border-radius: 0.5em;
-  border-radius: 0.5em;
+  -webkit-border-radius: 0.33em;
+  border-radius: 0.33em;
   background: #f4f4f4;
   border: none;
   margin: 1em 0;
@@ -883,8 +883,8 @@ body {
         text-decoration: none;
         cursor: pointer;
         padding: 0.6em 0.8em;
-        -webkit-border-radius: 0.3em;
-        border-radius: 0.3em;
+        -webkit-border-radius: 0.33em;
+        border-radius: 0.33em;
         font-weight: normal; }
         .l-text .l-header .l-user .menu li a:visited {
           color: #FFF;
@@ -1000,8 +1000,8 @@ body {
           text-decoration: none;
           cursor: pointer;
           padding: 0.8em 1.4em;
-          -webkit-border-radius: 0.3em;
-          border-radius: 0.3em;
+          -webkit-border-radius: 0.33em;
+          border-radius: 0.33em;
           font-weight: bold; }
           .l-text .l-main .l-menu .menu li a:visited {
             color: #FFF;
