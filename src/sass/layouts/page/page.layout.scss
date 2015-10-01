@@ -74,7 +74,7 @@
 }
 
 .l-region--page-updated {
-  @include rhythm(1.6, 0, 0, 1);
+  @include rhythm(2, 0, 0, 1);
 
   .pane-node-updated {
     font-family: $monospace;
