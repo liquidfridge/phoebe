@@ -857,7 +857,7 @@ body {
   background: #0A2D50; }
 
 .l-header {
-  padding: 1.5em 0;
+  padding: 1em 0;
   background: #20A3B6;
   color: #FFF; }
   .l-header:before, .l-header:after {
@@ -1139,7 +1139,7 @@ body {
     display: none; }
 
 .l-footer {
-  padding: 0.75em 0;
+  padding: 0.25em 0;
   background: #0A2D50;
   color: #aeb8c3; }
   .l-footer:before, .l-footer:after {
@@ -1197,6 +1197,8 @@ body {
 >= 752
 ----------------------------------------------------------------------*/
 @media (min-width: 47em) {
+  .l-header {
+    padding: 1.5em 0; }
   .l-main .l-content .l-constrained {
     padding: 3.5em 0 2em; }
   .l-footer {

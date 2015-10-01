@@ -15,7 +15,7 @@ body {
 
 .l-header {
   @include clearfix;
-  padding: ($vert-spacing-unit * 1.5) 0;
+  padding: ($vert-spacing-unit) 0;
   background: $sky;
   color: $white;
 
@@ -255,7 +255,7 @@ body {
 
 .l-footer {
   @include clearfix;
-  padding: ($vert-spacing-unit * 0.75) 0;
+  padding: ($vert-spacing-unit * 0.25) 0;
   background: $navy;
   color: $navy-grey;
 
@@ -318,6 +318,10 @@ body {
 ----------------------------------------------------------------------*/
 
 @include breakpoint($medium) {
+
+  .l-header {
+    padding: ($vert-spacing-unit * 1.5) 0;
+  }
 
   .l-main {
     .l-content {
