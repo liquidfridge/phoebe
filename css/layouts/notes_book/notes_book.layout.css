@@ -159,11 +159,11 @@ Pass any number of seconds referring to the duration of one full rotation for an
   .l-region--notes-book-toc .menu {
     font-size: 12px;
     font-size: 0.85714rem;
-    list-style: square;
+    list-style: disc;
     margin: 0;
     padding: 0; }
     .l-region--notes-book-toc .menu li {
-      list-style: square;
+      list-style: disc;
       margin-left: 1.5em;
       padding: 0; }
     .l-region--notes-book-toc .menu a {
