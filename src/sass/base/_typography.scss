@@ -105,10 +105,10 @@ blockquote {
   @include font-size(14px);
   line-height: 1.65;
   @include rhythm(1, 0.75, 0.75, 1);
-  margin-left: $horz-spacing-unit * 3;
-  margin-right: $horz-spacing-unit * 3;
-  padding-left: $horz-spacing-unit * 2.5;
-  padding-right: $horz-spacing-unit * 2.5;
+  margin-left: $horz-spacing-unit * 0.5;
+  margin-right: $horz-spacing-unit * 0.5;
+  padding-left: $horz-spacing-unit * 2;
+  padding-right: $horz-spacing-unit * 2;
   border-left: 3px solid $light-grey;
   font-family: $serif;
   font-style: italic;
@@ -150,6 +150,21 @@ div.krumo-root {
   ul {
     @include font-size(12px);
   }
+}
+
+/*----------------------------------------------------------------------
+>= 752
+----------------------------------------------------------------------*/
+
+@include breakpoint($medium) {
+
+  blockquote {
+    margin-left: $horz-spacing-unit * 3;
+    margin-right: $horz-spacing-unit * 3;
+    padding-left: $horz-spacing-unit * 2.5;
+    padding-right: $horz-spacing-unit * 2.5;
+  }
+
 }
 
 /*----------------------------------------------------------------------
