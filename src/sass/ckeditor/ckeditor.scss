@@ -28,6 +28,11 @@ a {
   }
 }
 
+h1,
+h2 {
+  border-bottom: 1px solid $light-grey;
+}
+
 figure {
   padding: ($vert-spacing-unit * 0.75) ($horz-spacing-unit * 0.75);
   border: 1px dashed $light-grey;

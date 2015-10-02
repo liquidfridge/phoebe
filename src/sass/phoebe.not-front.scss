@@ -39,8 +39,6 @@ body {
       .l-site-name {
         @include font-size(20px);
         @include rhythm(0, 0, 0, 0);
-        font-family: $serif;
-        font-weight: normal;
 
         a {
           @include link-colors($white, $white, $white, $white, $white);
