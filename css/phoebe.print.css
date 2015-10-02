@@ -30,18 +30,20 @@ tr.even {
 td {
   padding: 0.5em 0.5em; }
 
-#menu {
-  visibility: hidden; }
-
-#main {
-  margin: 1em 1em; }
+img,
+picture {
+  width: 100%;
+  max-width: 100%;
+  height: auto; }
 
 .l-header {
-  padding: 1em 1em; }
+  padding: 0.5em 1em; }
+  .l-header .l-site-name {
+    font-weight: bold; }
 
 .l-main {
-  padding: 1em 1em; }
+  padding: 0.5em 1em; }
 
 .l-footer {
   border-top: 1px solid #c8c8c8;
-  padding: 1em 1em; }
+  padding: 0.5em 1em; }

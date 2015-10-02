@@ -119,6 +119,15 @@ ul.footnotes {
       top: auto;
       left: auto;
       margin-right: 0.5em; }
+    ul.footnotes li a:not(.footnote-label) {
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      -ms-word-break: break-word;
+      word-break: break-word;
+      -webkit-hyphens: auto;
+      -moz-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto; }
 
 .see-footnote:target,
 .footnotes .footnote:target {
@@ -157,7 +166,7 @@ input[type="text"] {
   input[type="password"]:focus,
   input[type="tel"]:focus,
   input[type="text"]:focus {
-    border-color: #1b8c9c;
+    border-color: #1b8898;
     outline: none; }
 
 select {
@@ -173,7 +182,7 @@ textarea {
   textarea.error {
     border-color: #DD0000; }
   textarea:focus {
-    border-color: #1b8c9c;
+    border-color: #1b8898;
     outline: none; }
 
 button,
@@ -220,8 +229,8 @@ input[type="submit"] {
   input[type="reset"]:hover,
   input[type="submit"]:active, input[type="submit"]:focus, input[type="submit"]:hover {
     color: #FFF;
-    background: #1b8c9c;
-    border-color: #1b8c9c;
+    background: #1b8898;
+    border-color: #1b8898;
     text-decoration: none;
     outline: none; }
 
@@ -387,30 +396,22 @@ html {
  */
 body {
   font-family: Helvetica, Arial, sans-serif;
-  color: #222;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  -ms-word-break: break-word;
-  word-break: break-word;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-      hyphens: auto; }
+  color: #222; }
 
 /**
  * Links
  */
 a {
-  color: #1b8c9c;
+  color: #1b8898;
   text-decoration: none; }
   a:visited {
-    color: #1b8c9c; }
+    color: #1b8898; }
   a:focus {
-    color: #1b8c9c; }
+    color: #1b8898; }
   a:hover {
-    color: #1b8c9c; }
+    color: #1b8898; }
   a:active {
-    color: #1b8c9c; }
+    color: #1b8898; }
   a:visited {
     text-decoration: none; }
   a:active, a:focus, a:hover {
@@ -642,11 +643,11 @@ div.krumo-root {
     .comment__info a.username:visited {
       color: #222; }
     .comment__info a.username:focus {
-      color: #1b8c9c; }
+      color: #1b8898; }
     .comment__info a.username:hover {
-      color: #1b8c9c; }
+      color: #1b8898; }
     .comment__info a.username:active {
-      color: #1b8c9c; }
+      color: #1b8898; }
   .comment__info .permalink {
     margin-left: 0.5em; }
   .comment__info .time {
@@ -702,8 +703,8 @@ div.krumo-root {
   .comment__links a:hover,
   .ckeditor_links:active, .ckeditor_links:focus, .ckeditor_links:hover {
     color: #FFF;
-    background: #1b8c9c;
-    border-color: #1b8c9c;
+    background: #1b8898;
+    border-color: #1b8898;
     text-decoration: none;
     outline: none; }
 
@@ -1022,8 +1023,8 @@ body {
             outline: none; }
           .l-header .l-user .menu li a:active, .l-header .l-user .menu li a:focus, .l-header .l-user .menu li a:hover {
             color: #FFF;
-            background: #1b8c9c;
-            border-color: #1b8c9c;
+            background: #1b8898;
+            border-color: #1b8898;
             text-decoration: none;
             outline: none; }
 
@@ -1369,8 +1370,8 @@ body {
         outline: none; }
       .l-main .l-region--sidebar .block--dandelion-notes-admin a:active, .l-main .l-region--sidebar .block--dandelion-notes-admin a:focus, .l-main .l-region--sidebar .block--dandelion-notes-admin a:hover {
         color: #FFF;
-        background: #1b8c9c;
-        border-color: #1b8c9c;
+        background: #1b8898;
+        border-color: #1b8898;
         text-decoration: none;
         outline: none; }
   .l-footer {

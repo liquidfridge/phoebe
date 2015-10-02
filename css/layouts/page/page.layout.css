@@ -106,6 +106,15 @@ Pass any number of seconds referring to the duration of one full rotation for an
     text-decoration: underline; }
   .l-region--page-body a:active, .l-region--page-body a:focus, .l-region--page-body a:hover {
     text-decoration: none; }
+  .l-region--page-body a:not(.see-footnote) {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    -ms-word-break: break-word;
+    word-break: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+        hyphens: auto; }
 
 .l-region--page-body a.see-footnote,
 .l-region--page-body a.footnote-label {
