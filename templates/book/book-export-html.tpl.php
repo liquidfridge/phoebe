@@ -29,9 +29,9 @@
     <?php endif; ?>
   </head>
   <body>
-    <?php if ($header): ?>
+    <?php if ($site_name): ?>
       <div class="l-header">
-        <?php print $header; ?>
+        <p class="l-site-name"><?php print $site_name; ?></p>
       </div>
     <?php endif; ?>
     <div class="l-main">
@@ -54,8 +54,9 @@
         <?php print $contents; ?>
         <?php print $div_close; ?>
       </div>
-      <?php if ($footer): ?>
+      <?php if ($source || $footer): ?>
         <div class="l-footer">
+          <?php print $source; ?>
           <?php print $footer; ?>
         </div>
       <?php endif; ?>
