@@ -29,23 +29,26 @@ td {
   padding: ($vert-spacing-unit * 0.5) ($horz-spacing-unit * 0.5);
 }
 
-#menu {
-  visibility: hidden;
-}
-
-#main {
-  margin: ($vert-spacing-unit) ($horz-spacing-unit);
+img,
+picture {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
 }
 
 .l-header {
-  padding: ($vert-spacing-unit) ($horz-spacing-unit);
+  padding: ($vert-spacing-unit * 0.5) ($horz-spacing-unit);
+
+  .l-site-name {
+    font-weight: bold;
+  }
 }
 
 .l-main {
-  padding: ($vert-spacing-unit) ($horz-spacing-unit);
+  padding: ($vert-spacing-unit * 0.5) ($horz-spacing-unit);
 }
 
 .l-footer {
   border-top: 1px solid $light-grey;
-  padding: ($vert-spacing-unit) ($horz-spacing-unit);
+  padding: ($vert-spacing-unit * 0.5) ($horz-spacing-unit);
 }
