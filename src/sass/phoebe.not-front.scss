@@ -266,7 +266,6 @@ body {
 
   a {
     @include link-colors($light-sky, $light-sky, $light-sky, $light-sky, $light-sky);
-
     text-decoration: none;
 
     &:visited {
