@@ -9,3 +9,9 @@
   word-wrap: $word-wrap;
   overflow-wrap: $overflow-wrap;
 }
+
+@mixin word-wrap() {
+  @include overflow-wrap(break-word);
+  @include word-break(break-word);
+  @include hyphens(auto);
+}
