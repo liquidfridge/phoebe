@@ -14,9 +14,6 @@
 body {
   font-family: $sans-serif;
   color: $black;
-  @include overflow-wrap(break-word);
-  @include word-break(break-word);
-  @include hyphens(auto);
 }
 
 /**
