@@ -22,6 +22,10 @@ ul.footnotes {
       left: auto;
       margin-right: 0.5em;
     }
+
+    a:not(.footnote-label) {
+      @include word-wrap;
+    }
   }
 }
 

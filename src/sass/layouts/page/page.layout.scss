@@ -37,6 +37,10 @@
     &:active, &:focus, &:hover {
       text-decoration: none;
     }
+
+    &:not(.see-footnote) {
+      @include word-wrap;
+    }
   }
 
   a.see-footnote,
