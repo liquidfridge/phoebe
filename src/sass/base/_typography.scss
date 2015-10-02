@@ -59,7 +59,7 @@ h6 {
 
 h1 {
   @include font-size(32px);
-  @include rhythm(1, 0, 0.1, 0.75);
+  @include rhythm(1, 0, 0.075, 0.75);
 }
 
 h2 {
