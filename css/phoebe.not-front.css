@@ -499,9 +499,9 @@ p + img {
  * Quotes
  */
 blockquote {
-  font-size: 14px;
-  font-size: 1rem;
-  line-height: 1.65;
+  font-size: 16px;
+  font-size: 1.14286rem;
+  line-height: 1.57143;
   margin-top: 1.57143em;
   padding-top: 1.17857em;
   padding-bottom: 1.17857em;
@@ -510,10 +510,16 @@ blockquote {
   margin-right: 0.5em;
   padding-left: 2em;
   padding-right: 2em;
-  border-left: 3px solid #c8c8c8;
+  border-left: 4px solid #e9e9e9;
   font-family: Georgia, Times, "Times New Roman", serif;
   font-style: italic;
   color: #222; }
+  blockquote p,
+  blockquote ol,
+  blockquote ul {
+    font-size: 16px;
+    font-size: 1.14286rem;
+    line-height: 1.57143; }
   blockquote > p:last-child,
   blockquote > ol:last-child,
   blockquote > ul:last-child {
