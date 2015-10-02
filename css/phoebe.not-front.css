@@ -1272,7 +1272,7 @@ body {
     .l-main .l-content .l-constrained {
       width: 70%;
       margin: 0 20% 0 10%;
-      padding: 5em 0 4em; }
+      padding: 5.5em 0 4em; }
   .l-main .l-region--sidebar {
     display: block;
     width: 25%;
@@ -1285,7 +1285,7 @@ body {
     .l-main .l-region--sidebar .l-constrained {
       width: 55%;
       margin: 0 10% 0 35%;
-      padding: 5em 0; }
+      padding: 5.5em 0; }
     .l-main .l-region--sidebar .block--dandelion-notes-menu a {
       color: #2fc5da;
       text-decoration: none; }
