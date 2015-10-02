@@ -499,8 +499,8 @@ p + img {
  * Quotes
  */
 blockquote {
-  font-size: 16px;
-  font-size: 1.14286rem;
+  font-size: 15px;
+  font-size: 1.07143rem;
   line-height: 1.57143;
   margin-top: 1.57143em;
   padding-top: 1.17857em;
@@ -517,8 +517,8 @@ blockquote {
   blockquote p,
   blockquote ol,
   blockquote ul {
-    font-size: 16px;
-    font-size: 1.14286rem;
+    font-size: 15px;
+    font-size: 1.07143rem;
     line-height: 1.57143; }
   blockquote > p:last-child,
   blockquote > ol:last-child,
