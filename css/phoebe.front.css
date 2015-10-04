@@ -346,8 +346,8 @@ iframe {
 picture {
   display: inline-block;
   -webkit-box-sizing: padding-box;
-     -moz-box-sizing: padding-box;
-          box-sizing: padding-box;
+  -moz-box-sizing: padding-box;
+  box-sizing: padding-box;
   vertical-align: top; }
 
 img,
@@ -356,8 +356,8 @@ a img,
 *:visited img {
   border: none;
   -webkit-box-sizing: padding-box;
-     -moz-box-sizing: padding-box;
-          box-sizing: padding-box;
+  -moz-box-sizing: padding-box;
+  box-sizing: padding-box;
   height: auto;
   max-width: 100%;
   vertical-align: top;

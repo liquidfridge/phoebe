@@ -30,11 +30,25 @@ tr.even {
 td {
   padding: 0.5em 0.5em; }
 
-img,
 picture {
-  width: 100%;
+  display: inline-block;
+  -webkit-box-sizing: padding-box;
+  -moz-box-sizing: padding-box;
+  box-sizing: padding-box;
+  vertical-align: top; }
+
+img,
+a img,
+*:link img,
+*:visited img {
+  border: none;
+  -webkit-box-sizing: padding-box;
+  -moz-box-sizing: padding-box;
+  box-sizing: padding-box;
+  height: auto;
   max-width: 100%;
-  height: auto; }
+  vertical-align: top;
+  -ms-interpolation-mode: bicubic; }
 
 .l-header {
   padding: 0.5em 1em; }
