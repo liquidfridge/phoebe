@@ -29,11 +29,22 @@ td {
   padding: ($vert-spacing-unit * 0.5) ($horz-spacing-unit * 0.5);
 }
 
-img,
 picture {
   display: inline-block;
-  max-width: 100%;
+  @include box-sizing(padding-box);
+  vertical-align: top;
+}
+
+img,
+a img,
+*:link img,
+*:visited img {
+  border: none;
+  @include box-sizing(padding-box);
   height: auto;
+  max-width: 100%;
+  vertical-align: top;
+  -ms-interpolation-mode: bicubic;
 }
 
 .l-header {
