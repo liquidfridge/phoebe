@@ -722,6 +722,8 @@ picture {
   -webkit-box-sizing: padding-box;
   -moz-box-sizing: padding-box;
   box-sizing: padding-box;
+  height: auto;
+  max-width: 100%;
   vertical-align: top; }
 
 img,

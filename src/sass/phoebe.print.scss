@@ -32,6 +32,8 @@ td {
 picture {
   display: inline-block;
   @include box-sizing(padding-box);
+  height: auto;
+  max-width: 100%;
   vertical-align: top;
 }
 
