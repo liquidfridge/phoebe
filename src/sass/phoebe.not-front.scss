@@ -192,6 +192,11 @@ body {
       padding: ($vert-spacing-unit * 2) 0 ($vert-spacing-unit * 1);
     }
 
+    .l-title {
+      margin-top: 0;
+      border-bottom: 1px solid $light-grey;
+    }
+
     .tabs--primary {
       @include font-size(13px);
       @include rhythm(0, 0, 0, 2);

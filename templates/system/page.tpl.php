@@ -1,3 +1,10 @@
+<?php
+// Check if the page title should be displayed.
+$display_title = dandelion_check_path_visibility(1, implode("\n", array(
+  'comment/*',
+    )));
+?>
+
 <div class="l-page">
   <header class="l-header" role="banner"<?php
   if ($page['header_image']) {
@@ -51,6 +58,10 @@
         <?php print render($page['highlighted']); ?>
 
         <a id="main-content"></a>
+
+        <?php if ($display_title && $title): ?>
+          <h1 class="l-title"><?php print $title; ?></h1>
+        <?php endif; ?>
 
         <?php print $messages; ?>
         <?php print render($tabs); ?>
