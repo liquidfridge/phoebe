@@ -597,12 +597,21 @@ div.krumo-root {
   font-weight: bold;
   text-transform: uppercase; }
 
+.comments__title {
+  margin-top: 4.32143em;
+  padding-top: 0em;
+  padding-bottom: 0em;
+  margin-bottom: 0em;
+  border: none; }
+
 .comment {
   margin: 1em 0;
-  padding: 0; }
+  padding: 0.5em 0 0;
+  border-top: 1px solid #c8c8c8; }
 
 .comment--new {
   background: #fefacd;
+  border: none;
   padding: 1em 1em; }
   .comment--new .new {
     -webkit-border-radius: 0.33em;
