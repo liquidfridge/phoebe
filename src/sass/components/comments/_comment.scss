@@ -19,13 +19,20 @@
   text-transform: uppercase;
 }
 
+.comments__title {
+  @include rhythm(2.75, 0, 0, 0);
+  border: none;
+}
+
 .comment {
   margin: ($vert-spacing-unit) 0;
-  padding: 0;
+  padding: ($vert-spacing-unit * 0.5) 0 0;
+  border-top: 1px solid $light-grey;
 }
 
 .comment--new {
   background: $light-lemon;
+  border: none;
   padding: ($vert-spacing-unit) ($horz-spacing-unit);
 
   .new {
