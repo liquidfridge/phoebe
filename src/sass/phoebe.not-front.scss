@@ -280,6 +280,7 @@ body {
 
     p {
       @include font-size(12px);
+      line-height: ($base-line-height / $em-base);
       @include rhythm(1, 0, 0, 1);
     }
   }
@@ -481,6 +482,12 @@ body {
 
     .l-constrained {
       width: 82.5%;
+    }
+
+    .block--menu-menu-footer-menu {
+      .menu {
+        margin: 0 0 ($vert-spacing-unit * 1);
+      }
     }
   }
 
