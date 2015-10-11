@@ -1085,6 +1085,9 @@ body {
       width: 86%;
       margin: 0 auto;
       padding: 2em 0 1em; }
+    .l-main .l-content .l-title {
+      margin-top: 0;
+      border-bottom: 1px solid #c8c8c8; }
     .l-main .l-content .tabs--primary {
       font-size: 13px;
       font-size: 0.92857rem;
