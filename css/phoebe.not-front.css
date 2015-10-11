@@ -1189,6 +1189,7 @@ body {
     .l-footer .block--footer-message p {
       font-size: 12px;
       font-size: 0.85714rem;
+      line-height: 1.57143;
       margin-top: 1.57143em;
       padding-top: 0em;
       padding-bottom: 0em;
@@ -1385,4 +1386,6 @@ body {
   .l-footer {
     padding: 2.5em 0; }
     .l-footer .l-constrained {
-      width: 82.5%; } }
+      width: 82.5%; }
+    .l-footer .block--menu-menu-footer-menu .menu {
+      margin: 0 0 1em; } }
