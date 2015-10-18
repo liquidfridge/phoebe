@@ -81,7 +81,7 @@
   @include rhythm(2.5, 0, 0, 0);
   @include border-radius($border-radius);
   background: $light-lemon;
-  padding: ($vert-spacing-unit * 1.25) ($horz-spacing-unit * 1.5);
+  padding: ($vert-spacing-unit * 1) ($horz-spacing-unit * 1.25);
 
   a {
     text-decoration: underline;
