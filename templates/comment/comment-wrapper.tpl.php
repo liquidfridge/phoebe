@@ -38,6 +38,12 @@
  */
 ?>
 <section<?php print $attributes; ?>>
+  <?php if ($node->comment == 2 && !$content['comment_form'] && $node->type == 'book'): ?>
+    <div class="l-comments-book">
+      <p><?php print t('Do you want to add something to this page? !contact_us, please.', array('!contact_us' => l('Let us know', '/notes/get-involved'))); ?></p>
+    </div>
+  <?php endif; ?>
+
   <?php if ($content['comments'] && $node->type != 'forum'): ?>
     <?php print render($title_prefix); ?>
     <h2<?php print $title_attributes ?>><?php print t('Comments'); ?></h2>

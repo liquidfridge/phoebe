@@ -3,6 +3,43 @@
  * Comments.
  */
 
+.l-comments-book {
+  @include rhythm(2, 0, 0, 1);
+  @include border-radius($border-radius);
+  background: $light-lemon;
+  padding: ($vert-spacing-unit * 1) ($horz-spacing-unit * 1.25);
+
+  a {
+    color: $black;
+    text-decoration: underline;
+
+    &:visited {
+      color: $black;
+      text-decoration: underline;
+    }
+
+    &:active, &:focus, &:hover {
+      color: $black;
+      text-decoration: none;
+    }
+  }
+
+  p,
+  ol,
+  ul {
+    @include font-size(13px);
+    line-height: ($base-line-height / $em-base);
+  }
+
+  > p,
+  > ol,
+  > ul {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
 .comments {
   .indented {
     margin-left: $horz-spacing-unit * 3;
