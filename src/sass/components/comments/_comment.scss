@@ -20,7 +20,7 @@
 }
 
 .comments__title {
-  @include rhythm(2.5, 0, 0, -0.5);
+  @include rhythm(2.5, 0, 0, 0);
   border: none;
 }
 
