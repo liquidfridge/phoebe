@@ -154,7 +154,8 @@ Pass any number of seconds referring to the duration of one full rotation for an
       font-size: 12px;
       font-size: 0.85714rem;
       margin-top: 1.57143em;
-      padding-top: 0em;
+      padding-top: 0.78571em;
       padding-bottom: 0em;
       margin-bottom: 1.57143em;
-      color: #7a7a7a; }
+      color: #7a7a7a;
+      border-top: 1px solid #c8c8c8; }
