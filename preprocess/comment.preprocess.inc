@@ -18,6 +18,11 @@ function phoebe_preprocess_comment(&$variables) {
     }
   }
 
+  // Remove "comment forbidden" message because it's empty.
+  if (isset($variables['content']['links']['comment']['#links']['comment_forbidden'])) {
+    unset($variables['content']['links']['comment']['#links']['comment_forbidden']);
+  }
+
   $uri = entity_uri('comment', $comment);
   $uri['options'] += array(
     'attributes' => array(
