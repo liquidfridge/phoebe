@@ -6,7 +6,7 @@
 .filter-wrapper {
   @include border-radius($border-radius);
   background: $lightest-grey;
-  border: none;
+  border: 1px solid $lighter-grey;
   margin: ($vert-spacing-unit) 0;
   padding: 0;
 
