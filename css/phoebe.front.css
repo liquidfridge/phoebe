@@ -581,6 +581,35 @@ div.krumo-root {
  * @file
  * Comments.
  */
+.l-comments-book {
+  margin-top: 3.14286em;
+  padding-top: 0em;
+  padding-bottom: 0em;
+  margin-bottom: 1.57143em;
+  -webkit-border-radius: 0.33em;
+  border-radius: 0.33em;
+  background: #fcf6a5;
+  padding: 1em 1.25em; }
+  .l-comments-book a {
+    color: #222;
+    text-decoration: underline; }
+    .l-comments-book a:visited {
+      color: #222;
+      text-decoration: underline; }
+    .l-comments-book a:active, .l-comments-book a:focus, .l-comments-book a:hover {
+      color: #222;
+      text-decoration: none; }
+  .l-comments-book p,
+  .l-comments-book ol,
+  .l-comments-book ul {
+    font-size: 13px;
+    font-size: 0.92857rem;
+    line-height: 1.57143; }
+  .l-comments-book > p:last-child,
+  .l-comments-book > ol:last-child,
+  .l-comments-book > ul:last-child {
+    margin-bottom: 0; }
+
 .comments .indented {
   margin-left: 3em; }
 
