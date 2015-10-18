@@ -144,19 +144,22 @@ Pass any number of seconds referring to the duration of one full rotation for an
     max-width: none; }
 
 .l-region--notes-book-contribute {
-  margin-top: 3.92857em;
+  margin-top: 2.35714em;
   padding-top: 0em;
   padding-bottom: 0em;
-  margin-bottom: 0em;
+  margin-bottom: 1.57143em;
   -webkit-border-radius: 0.33em;
   border-radius: 0.33em;
   background: #fcf6a5;
-  padding: 1.25em 1.5em; }
+  padding: 1em 1.25em; }
   .l-region--notes-book-contribute a {
+    color: #222;
     text-decoration: underline; }
     .l-region--notes-book-contribute a:visited {
+      color: #222;
       text-decoration: underline; }
     .l-region--notes-book-contribute a:active, .l-region--notes-book-contribute a:focus, .l-region--notes-book-contribute a:hover {
+      color: #222;
       text-decoration: none; }
   .l-region--notes-book-contribute .panel-pane p,
   .l-region--notes-book-contribute .panel-pane ol,
@@ -170,7 +173,7 @@ Pass any number of seconds referring to the duration of one full rotation for an
     margin-bottom: 0; }
 
 .l-region--notes-book-updated {
-  margin-top: 2.35714em;
+  margin-top: 3.14286em;
   padding-top: 0em;
   padding-bottom: 0em;
   margin-bottom: 1.57143em; }

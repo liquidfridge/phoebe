@@ -588,7 +588,7 @@ div.krumo-root {
 .comments__form-title {
   font-size: 16px;
   font-size: 1.14286rem;
-  margin-top: 4.32143em;
+  margin-top: 3.92857em;
   padding-top: 0em;
   padding-bottom: 0.31429em;
   margin-bottom: 1.57143em;
@@ -598,14 +598,14 @@ div.krumo-root {
   text-transform: uppercase; }
 
 .comments__title {
-  margin-top: 4.32143em;
+  margin-top: 3.92857em;
   padding-top: 0em;
   padding-bottom: 0em;
   margin-bottom: 0em;
   border: none; }
 
 .comment {
-  margin: 1em 0;
+  margin: 2.5em 0;
   padding: 0.5em 0 0;
   border-top: 1px solid #c8c8c8; }
 
@@ -631,7 +631,7 @@ div.krumo-root {
   margin-top: 0em;
   padding-top: 0em;
   padding-bottom: 0em;
-  margin-bottom: 1.57143em;
+  margin-bottom: 0.78571em;
   color: #7a7a7a; }
   .comment__info p {
     font-size: 12px;
@@ -704,7 +704,7 @@ div.krumo-root {
   font-weight: bold;
   text-decoration: none;
   cursor: pointer;
-  padding: 0.6em 0.8em;
+  padding: 0.6em 0.75em;
   -webkit-border-radius: 0.33em;
   border-radius: 0.33em;
   font-weight: normal; }
@@ -734,7 +734,7 @@ div.krumo-root {
   margin-top: 0em;
   padding-top: 0em;
   padding-bottom: 0em;
-  margin-bottom: 3.14286em; }
+  margin-bottom: 2.35714em; }
   .comment__links li {
     margin-top: 0em;
     padding-top: 0em;
@@ -763,7 +763,7 @@ div.krumo-root {
   .comments .indented {
     margin-left: 4em; }
   .comment {
-    margin: 1.5em 0; } }
+    margin: 3em 0; } }
 
 /**
  * @file
