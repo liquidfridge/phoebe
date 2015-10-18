@@ -131,10 +131,10 @@ ul.footnotes {
 
 .see-footnote:target,
 .footnotes .footnote:target {
-  background-color: #e9e9e9; }
+  background-color: #e4e4e4; }
 
 .see-footnote:target {
-  border: solid 1px #e9e9e9; }
+  border: solid 1px #e4e4e4; }
 
 /**
  * @file
@@ -512,7 +512,7 @@ blockquote {
   margin-right: 0.5em;
   padding-left: 2em;
   padding-right: 2em;
-  border-left: 4px solid #e9e9e9;
+  border-left: 4px solid #e4e4e4;
   font-family: Georgia, Times, "Times New Roman", serif;
   font-style: italic;
   color: #222; }
@@ -730,11 +730,16 @@ div.krumo-root {
 .ckeditor_links {
   margin: 1.5em 0 0; }
 
-.comment__links li {
+.comment__links {
   margin-top: 0em;
   padding-top: 0em;
   padding-bottom: 0em;
-  margin-bottom: 0em; }
+  margin-bottom: 3.14286em; }
+  .comment__links li {
+    margin-top: 0em;
+    padding-top: 0em;
+    padding-bottom: 0em;
+    margin-bottom: 0em; }
 
 .form-item-comment-body-und-0-value label {
   position: absolute !important;
@@ -758,7 +763,7 @@ div.krumo-root {
   .comments .indented {
     margin-left: 4em; }
   .comment {
-    margin: 2.5em 0; } }
+    margin: 1.5em 0; } }
 
 /**
  * @file
@@ -768,7 +773,7 @@ div.krumo-root {
   -webkit-border-radius: 0.33em;
   border-radius: 0.33em;
   background: #f4f4f4;
-  border: none;
+  border: 1px solid #e4e4e4;
   margin: 1em 0;
   padding: 0; }
   .filter-wrapper .form-item {
