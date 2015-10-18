@@ -379,6 +379,125 @@ a img,
   width: 100%;
   height: 100%; }
 
+/*
+ * A partial implementation of the Ruby list functions from Compass:
+ * https://github.com/Compass/compass/blob/stable/lib/compass/sass_extensions/functions/lists.rb
+ */
+/*
+ * A partial implementation of the Ruby constants functions from Compass:
+ * https://github.com/Compass/compass/blob/stable/lib/compass/sass_extensions/functions/constants.rb
+ */
+/*
+ * A partial implementation of the Ruby display functions from Compass:
+ * https://github.com/Compass/compass/blob/stable/core/lib/compass/core/sass_extensions/functions/display.rb
+ */
+/*
+================================================================================
+SPINNERS
+================================================================================
+A Sass mixin to generate a pure CSS3 loading/busy indicator.
+https://github.com/franzheidl/spinners
+Franz Heidl 2014
+MIT License
+--------------------------------------------------------------------------------
+USAGE
+
+Default:
+
+.my-spinner {
+ @include spinner();
+}
+
+
+Custom:
+
+.my-spinner {
+ @include spinner(1.25em, 3px solid #555, .7s, background rgba(0, 0, 0, .2);
+}
+
+All arguments are optional.
+
+Acceppts any valid CSS dimensional declaration, e.g px, em, rem as an argument for size.
+
+Use either shorthand border declarations or individual 'border-[property] [value]' (no colon!) pairs for the style.
+
+Pass any number of seconds referring to the duration of one full rotation for animation speed.
+
+--------------------------------------------------------------------------------
+*/
+@-webkit-keyframes spinner-animation {
+  0% {
+    -webkit-transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg); } }
+
+@-moz-keyframes spinner-animation {
+  0% {
+    -moz-transform: rotate(0deg); }
+  100% {
+    -moz-transform: rotate(360deg); } }
+
+@-o-keyframes spinner-animation {
+  0% {
+    -o-transform: rotate(0deg); }
+  100% {
+    -o-transform: rotate(100deg); } }
+
+@keyframes spinner-animation {
+  0% {
+    -webkit-transform: rotate(0deg);
+       -moz-transform: rotate(0deg);
+         -o-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+       -moz-transform: rotate(360deg);
+         -o-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+/**
+ * Clearfix: contain floats
+ * https://github.com/h5bp/html5-boilerplate/blob/master/dist/css/main.css
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ * `contenteditable` attribute is included anywhere else in the document.
+ * Otherwise it causes space to appear at the top and bottom of elements
+ * that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ * `:before` to contain the top-margins of child elements.
+ */
+.figure-table {
+  margin-top: 0em;
+  padding-top: 0.39286em;
+  padding-bottom: 0em;
+  margin-bottom: 0em; }
+
+/*----------------------------------------------------------------------
+>= 752
+----------------------------------------------------------------------*/
+@media (min-width: 47em) {
+  .figure-table {
+    margin-top: 0em;
+    padding-top: 0.39286em;
+    padding-bottom: 0em;
+    margin-bottom: -1.96429em;
+    width: 100%; }
+    .figure-table:before, .figure-table:after {
+      content: " ";
+      /* 1 */
+      display: table;
+      /* 2 */ }
+    .figure-table:after {
+      clear: both; }
+    .figure-table figure {
+      float: left;
+      width: 46%;
+      margin-left: 2%;
+      margin-right: 2%; }
+      .figure-table figure:nth-child(2n+1) {
+        clear: left; } }
+
 /**
  * @file
  * Typography.
