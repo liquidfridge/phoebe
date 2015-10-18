@@ -12,7 +12,7 @@
 .comments__title,
 .comments__form-title {
   @include font-size(16px);
-  @include rhythm(2.75, 0, 0.2, 1);
+  @include rhythm(2.5, 0, 0.2, 1);
   border-bottom: 1px solid $light-grey;
   font-family: $sans-serif;
   font-weight: bold;
@@ -20,12 +20,12 @@
 }
 
 .comments__title {
-  @include rhythm(2.75, 0, 0, 0);
+  @include rhythm(2.5, 0, 0, -0.5);
   border: none;
 }
 
 .comment {
-  margin: ($vert-spacing-unit) 0;
+  margin: ($vert-spacing-unit * 2.5) 0;
   padding: ($vert-spacing-unit * 0.5) 0 0;
   border-top: 1px solid $light-grey;
 }
@@ -49,7 +49,7 @@
 .comment__info {
   font-family: $monospace;
   @include font-size(12px);
-  @include rhythm(0, 0, 0, 1);
+  @include rhythm(0, 0, 0, 0.5);
   color: $grey;
 
   p {
@@ -125,7 +125,7 @@
 }
 
 .comment__links {
-  @include rhythm(0, 0, 0, 2);
+  @include rhythm(0, 0, 0, 1.5);
 
   li {
     @include rhythm(0, 0, 0, 0);
@@ -163,7 +163,7 @@
   }
 
   .comment {
-    margin: ($vert-spacing-unit * 1.5) 0;
+    margin: ($vert-spacing-unit * 3) 0;
   }
 
 }
