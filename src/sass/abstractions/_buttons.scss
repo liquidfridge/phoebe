@@ -1,9 +1,9 @@
 @mixin button-small($equal:"") {
   @if $equal == "" {
-    padding: ($vert-spacing-unit * 0.55) ($horz-spacing-unit * 0.75);
+    padding: ($vert-spacing-unit * 0.6) ($horz-spacing-unit * 0.75);
   }
   @else {
-    padding: ($vert-spacing-unit * 0.55);
+    padding: ($vert-spacing-unit * 0.6);
   }
 }
 
