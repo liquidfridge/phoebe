@@ -35,9 +35,6 @@ h2 {
 
 figure {
   @include box-sizing(border-box);
-  width: 50% !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
   padding: ($vert-spacing-unit * 0.75) ($horz-spacing-unit * 0.75);
   border: 1px dashed $light-grey;
   text-align: center;
@@ -46,5 +43,13 @@ figure {
     @include font-size(13px);
     padding: ($vert-spacing-unit * 0.75) 0 0;
     text-align: center;
+  }
+}
+
+.figure-table {
+  figure {
+    width: 50% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
 }

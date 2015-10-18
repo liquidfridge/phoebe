@@ -1091,9 +1091,6 @@ figure {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  width: 50% !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
   padding: 0.75em 0.75em;
   border: 1px dashed #c8c8c8;
   text-align: center; }
@@ -1102,3 +1099,8 @@ figure {
     font-size: 0.92857rem;
     padding: 0.75em 0 0;
     text-align: center; }
+
+.figure-table figure {
+  width: 50% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important; }
