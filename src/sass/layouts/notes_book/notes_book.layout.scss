@@ -78,7 +78,7 @@
 }
 
 .l-region--notes-book-updated {
-  @include rhythm(2, 0, 0, 1);
+  @include rhythm(2.25, 0, 0, 1);
 
   .pane-node-updated {
     font-family: $monospace;
