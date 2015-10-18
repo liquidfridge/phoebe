@@ -77,8 +77,44 @@
   }
 }
 
+.l-region--notes-book-contribute {
+  @include rhythm(2.5, 0, 0, 0);
+  @include border-radius($border-radius);
+  background: $light-lemon;
+  padding: ($vert-spacing-unit * 1.25) ($horz-spacing-unit * 1.5);
+
+  a {
+    text-decoration: underline;
+
+    &:visited {
+      text-decoration: underline;
+    }
+
+    &:active, &:focus, &:hover {
+      text-decoration: none;
+    }
+  }
+
+  .panel-pane {
+    p,
+    ol,
+    ul {
+      @include font-size(13px);
+      line-height: ($base-line-height / $em-base);
+    }
+
+    > p,
+    > ol,
+    > ul {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
 .l-region--notes-book-updated {
-  @include rhythm(2, 0, 0, 1);
+  @include rhythm(1.5, 0, 0, 1);
 
   .pane-node-updated {
     font-family: $monospace;
@@ -93,10 +129,11 @@
 
 .l-region--notes-book-toc {
   margin: 0 0 ($vert-spacing-unit * 2.5) ($horz-spacing-unit * 2);
-  padding: ($vert-spacing-unit * 0.75) ($horz-spacing-unit * 0.75);
+  padding: ($vert-spacing-unit) ($horz-spacing-unit);
   float: right;
+  @include border-radius($border-radius);
   background: $lightest-grey;
-  border: 1px solid $light-grey;
+  border: 1px solid $lighter-grey;
 
   .menu {
     @include font-size(12px);

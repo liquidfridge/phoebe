@@ -10,6 +10,7 @@ regions[notes_book_updated] = Date updated
 regions[notes_book_toc] = Book table of contents
 regions[notes_book_nav] = Book navigation
 regions[notes_book_comments] = Comments
+regions[notes_book_contribute] = Contribute to page
 
 ; Stylesheets
 stylesheets[all][] = css/layouts/notes_book/notes_book.layout.css
