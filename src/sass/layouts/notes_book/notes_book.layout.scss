@@ -78,7 +78,7 @@
 }
 
 .l-region--notes-book-contribute {
-  @include rhythm(2.5, 0, 0, 0);
+  @include rhythm(1.5, 0, 0, 1);
   @include border-radius($border-radius);
   background: $light-lemon;
   padding: ($vert-spacing-unit * 1) ($horz-spacing-unit * 1.25);
@@ -117,7 +117,7 @@
 }
 
 .l-region--notes-book-updated {
-  @include rhythm(1.5, 0, 0, 1);
+  @include rhythm(2, 0, 0, 1);
 
   .pane-node-updated {
     font-family: $monospace;
