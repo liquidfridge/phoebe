@@ -103,7 +103,7 @@ p + img {
  */
 blockquote {
   @extend %p;
-  @include font-size(15px);
+  @include font-size(18px);
   line-height: ($base-line-height / $em-base);
   @include rhythm(1, 0.75, 0.75, 1);
   margin-left: $horz-spacing-unit * 0.5;
@@ -118,7 +118,7 @@ blockquote {
   p,
   ol,
   ul {
-    @include font-size(15px);
+    @include font-size(18px);
     line-height: ($base-line-height / $em-base);
   }
 
